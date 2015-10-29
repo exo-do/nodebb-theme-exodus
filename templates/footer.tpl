@@ -1,8 +1,8 @@
-		</div><!--END container -->
+		</div><!-- END container -->
 	</main>
 
 	<div class="hide">
-	<!-- IMPORT 500.tpl -->
+	<!-- IMPORT 500-embed.tpl -->
 	</div>
 
 

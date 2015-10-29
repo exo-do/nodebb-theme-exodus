@@ -1,12 +1,17 @@
-<!-- IMPORT partials/breadcrumbs.tpl -->
-
-<div component="groups/container" class="details row">
-	<div class="col-xs-12" component="groups/cover" style="background-origin: content-box; background-image: url({group.cover:url}); background-position: {group.cover:position};">
-		<div class="change">[[groups:cover-change]] <i class="fa fa-fw fa-pencil-square-o"></i></div>
+<div component="groups/container" class="groups details row">
+	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+		<div class="controls">
+			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
+			<span class="resize"><i class="fa fa-fw fa-4x fa-arrows-alt"></i></span>
+		</div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
-		<div class="instructions">[[groups:cover-instructions]]</div>
 	</div>
+
+	<div class="col-xs-12">
+		<!-- IMPORT partials/breadcrumbs.tpl -->
+	</div>
+
 	<div class="col-lg-6 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -169,12 +174,12 @@
 					<hr />
 					<div class="checkbox">
 						<label>
-							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled-->> <strong>[[groups:details.userTitleEnabled]]</strong>
+							<input name="userTitleEnabled" type="checkbox"<!-- IF group.userTitleEnabled --> checked<!-- ENDIF group.userTitleEnabled -->> <strong>[[groups:details.userTitleEnabled]]</strong>
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private-->> <strong>[[groups:details.private]]</strong>
+							<input name="private" type="checkbox"<!-- IF group.private --> checked<!-- ENDIF group.private -->> <strong>[[groups:details.private]]</strong>
 							<p class="help-block">
 								[[groups:details.private_help]]
 							</p>
@@ -182,7 +187,7 @@
 					</div>
 					<div class="checkbox">
 						<label>
-							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden-->> <strong>[[groups:details.hidden]]</strong>
+							<input name="hidden" type="checkbox"<!-- IF group.hidden --> checked<!-- ENDIF group.hidden -->> <strong>[[groups:details.hidden]]</strong>
 							<p class="help-block">
 								[[groups:details.hidden_help]]
 							</p>
