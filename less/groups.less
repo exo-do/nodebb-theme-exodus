@@ -94,8 +94,8 @@
 	}
 
 	[component="groups/members"], [component="groups/pending"], [component="groups/invited"] {
-		img {
-			width: 32px;
+		img, .user-icon {
+			.user-icon-style();
 		}
 
 		.member-name {
@@ -157,9 +157,9 @@
 				list-style-type: none;
 				display: inline-block;
 
-				img {
-					width: 32px;
-					height: 32px;
+				img, .user-icon {
+					.user-icon-style();
+					line-height: normal; /* see: https://community.nodebb.org/topic/6804/user-icons-testing */
 				}
 			}
 

@@ -15,11 +15,9 @@
 			padding: 0.5em;
 			clear: both;
 
-			img {
-				max-width: 32px;
-				max-height: 32px;
+			img, .user-icon {
+				.user-icon-style(@border-radius: 50%);
 				float: left;
-				border-radius: 50%;
 			}
 
 			a {
@@ -91,10 +89,9 @@
 					left: -26px;
 				}
 
-				img {
-					width: 32px;
+				img, .user-icon {
+					.user-icon-style(@border-radius: 50%);
 					margin-right: 1em;
-					border-radius: 50%;
 				}
 			}
 
@@ -127,10 +124,8 @@
 	#user_dropdown {
 		padding: 10px 15px;
 
-		img {
-			width: 30px;
-			height: 30px;
-			border-radius: 50%;
+		img, .user-icon {
+			.user-icon-style(30px, 1.8rem, 50%);
 			border: 0px none;
 
 			span {

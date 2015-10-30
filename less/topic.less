@@ -35,19 +35,33 @@
 
 	.posts {
 		.icon {
-			font-size: 17px;
-			line-height: 17px;
+			position: relative;
 			border-radius: 50%;
 			min-width: 46px;
 			min-height: 46px;
 			margin-top: 2px;
 
-			img {
-				margin-right: 15px;
-				width: 46px;
-				height: 46px;
-				border-radius: 50%;
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+
+				@media (min-width: @screen-md-min) {
+					top: 2px;
+					font-size: 16px;
+				}
 			}
+
+			img, .user-icon {
+				margin-right: 15px;
+				.user-icon-style(46px, 2.4rem, 50%);
+			}
+		}
+
+		.status {
+			vertical-align: 0%;
 		}
 
 		.group-label {
@@ -186,11 +200,10 @@
 		.posts .icon {
 			min-width: 0;
 			min-height: 0;
-			margin-top: 5px;
+			margin-top: -3px;
 
-			img {
-				width: 23px;
-				height: 23px;
+			img, .user-icon {
+				.user-icon-style(23px, 1.3rem, 50%);
 			}
 		}
 	}
@@ -213,7 +226,7 @@
 		> li {
 			position: relative;
 
-			.edit-icon, .status {
+			.edit-icon {
 				vertical-align: -2%;
 			}
 
@@ -317,13 +330,11 @@
 
 	a[data-uid] {
 		position: relative;
-		margin-left: 14px;
 
-		img {
-			border-radius: 50%;
-			width: 20px;
-			height: 20px;
+		img, .user-icon {
+			.user-icon-style(20px, 1rem, 50%);
 			vertical-align: middle;
+			margin: 0 7px;
 		}
 
 		&::after {
@@ -334,15 +345,15 @@
 			font-family: "FontAwesome";
 			content: "\f11c";
 			padding: 4px 0.25em;
-			top: 0px;
-			left: 0px;
+			top: -36px;
+			left: 7px;
 
 			.transition(~"opacity ease 250ms, top ease 250ms")
 		}
 
 		&.replying::after {
 			opacity: 1;
-			top: -24px;
+			top: -50px;
 			.animation(topic-reply-pulse 2s ease-in infinite);
 		}
 	}

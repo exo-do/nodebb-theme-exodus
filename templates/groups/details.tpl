@@ -2,7 +2,7 @@
 	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
-			<span class="resize"><i class="fa fa-fw fa-4x fa-arrows-alt"></i></span>
+			<span class="resize"><i class="fa fa-fw fa-4x fa-arrows"></i></span>
 		</div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
@@ -70,7 +70,11 @@
 					<!-- BEGIN pending -->
 					<tr data-uid="{group.pending.uid}">
 						<td>
-							<a href="{config.relative_path}/user/{group.pending.userslug}"><img src="{group.pending.picture}" /></a>
+							<!-- IF group.members.picture -->
+							<a href="{config.relative_path}/user/{group.members.userslug}"><img src="{group.members.picture}" /></a>
+							<!-- ELSE -->
+							<div class="user-icon" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
+							<!-- ENDIF group.members.picture -->
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.pending.userslug}">{group.pending.username}</a>
@@ -106,7 +110,11 @@
 					<!-- BEGIN invited -->
 					<tr data-uid="{group.invited.uid}">
 						<td>
+							<!-- IF group.invited.picture -->
 							<a href="{config.relative_path}/user/{group.invited.userslug}"><img src="{group.invited.picture}" /></a>
+							<!-- ELSE -->
+							<div class="user-icon" style="background-color: {group.invited.icon:bgColor};">{group.invited.icon:text}</div>
+							<!-- ENDIF group.invited.picture -->
 						</td>
 						<td class="member-name">
 							<a href="{config.relative_path}/user/{group.invited.userslug}">{group.invited.username}</a>

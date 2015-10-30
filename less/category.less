@@ -52,11 +52,11 @@
 					}
 				}
 
-				.user-img {
+				.user-img, .user-icon {
 					opacity: 1;
 				}
 
-				.fa-check, .user-img {
+				.fa-check, .user-img, .user-icon {
 					.transition(.2s ease-in-out opacity);
 				}
 
@@ -64,7 +64,7 @@
 			}
 
 			&.selected {
-				.select .user-img {
+				.select .user-img, .select .user-icon {
 					opacity: 0;
 				}
 
@@ -85,6 +85,11 @@
 
 			.fa-stack {
 				font-size: 90%;
+			}
+
+			.card .user-icon {
+				display: inline-block;
+				.user-icon-style(24px, 1.5rem, 50%);
 			}
 		}
 

@@ -4,7 +4,15 @@
 	<div class="row">
 		<div class="col-md-2 col-sm-4">
 			<div class="account-picture-block text-center">
-				<img id="user-current-picture" class="user-profile-picture" src="{picture}" /><br /><br />
+				<div class="row">
+					<div class="col-xs-12">
+						<!-- IF picture -->
+						<img id="user-current-picture" class="user-profile-picture" src="{picture}" />
+						<!-- ELSE -->
+						<div class="user-icon user-profile-picture" style="background-color: {icon:bgColor};">{icon:text}</div>
+						<!-- ENDIF picture -->
+					</div>
+				</div>
 				<ul class="list-group">
 					<a id="changePictureBtn" href="#" class="list-group-item">[[user:change_picture]]</a>
 					<!-- IF !username:disableEdit -->
