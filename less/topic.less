@@ -66,7 +66,7 @@
 
 		.group-label {
 			text-transform: uppercase;
-			vertical-align: 6%;
+			vertical-align: 5%;
 			padding: 4px;
 			border-radius: 2px;
 		}
@@ -74,8 +74,8 @@
 
 	.bookmarked {
 		position: absolute;
-		top: 1px;
-		right: 0px;
+		top: -2px;
+		right: 6px;
 		font-size: 16px;
 		color: darken(@brand-info, 20%);
 		opacity: 0;
@@ -143,7 +143,7 @@
 			outline: none;
 
 			&[role="menuitem"] {
-				color: @gray-light;
+				color: inherit;
 			}
 		}
 
@@ -277,6 +277,7 @@
 
 			iframe, .img-responsive {
 				max-width: 85%;
+				display: inline;
 			}
 
 			.toggle {
