@@ -1,0 +1,56 @@
+//HEADER
+
+/* navbar colors */
+.header {
+	background-color: @navbar-bg;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav .btn-link, .navbar-default  .pagination-block i {
+	color: @navbar-icon;
+}
+		
+.navbar-default	.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default	.navbar-nav .btn-link:hover ,
+ .pagination-block i.fa:hover, .pagination-block i.fa:focus{
+	color: @navbar-hover;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	background-color: @navbar-icon;
+}
+
+/* mobile toogle */
+.navbar-default .navbar-toggle {
+	border: inherit;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: inherit;
+	.icon-bar {
+		background-color: @navbar-hover;
+	}
+}
+
+/* logo */
+.header .forum-logo {
+	margin-top: 10px;
+	width: 95px;
+	height: 30px;
+	margin-left: -6px;
+	@media (max-width: @screen-xs-max){
+		margin-left: 10px;
+	}
+	margin-right: 5px;
+}
+
+//STYLE
+body {
+background: @bg-color; 	
+}
+
+
+// modules/NPROGRESS
+#nprogress .bar {
+  	background: @primary
+}
+#nprogress .spinner-icon {
+    border-top-color: @primary;
+    border-left-color: @primary;
+}
+
