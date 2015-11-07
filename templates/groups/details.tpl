@@ -1,18 +1,21 @@
 <div component="groups/container" class="groups details row">
 	<div component="groups/cover" style="background-image: url({group.cover:url}); background-position: {group.cover:position};">
+		<!-- IF group.isOwner -->
 		<div class="controls">
 			<span class="upload"><i class="fa fa-fw fa-4x fa-upload"></i></span>
 			<span class="resize"><i class="fa fa-fw fa-4x fa-arrows"></i></span>
+			<span class="remove"><i class="fa fa-fw fa-4x fa-times"></i></span>
 		</div>
 		<div class="save">[[groups:cover-save]] <i class="fa fa-fw fa-floppy-o"></i></div>
 		<div class="indicator">[[groups:cover-saving]] <i class="fa fa-fw fa-refresh fa-spin"></i></div>
+		<!-- ENDIF group.isOwner -->
 	</div>
 
 	<div class="col-xs-12">
 		<!-- IMPORT partials/breadcrumbs.tpl -->
 	</div>
 
-	<div class="col-lg-6 col-xs-12">
+	<div class="col-lg-4 col-xs-12">
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">
@@ -138,11 +141,7 @@
 				</table>
 			</div>
 		</div>
-		<!-- ENDIF group.isOwner -->
-		<div widget-area="left"></div>
-	</div>
-	<div class="col-lg-6 col-xs-12">
-		<!-- IF group.isOwner -->
+
 		<div class="panel panel-default">
 			<div class="panel-heading pointer" data-toggle="collapse" data-target=".options">
 				<h3 class="panel-title">
@@ -212,8 +211,10 @@
 			</div>
 		</div>
 		<!-- ENDIF group.isOwner -->
-
-		<div>
+		<div widget-area="left"></div>
+	</div>
+	<div class="col-lg-8 col-xs-12">
+		<div class="col-lg-11">
 			<!-- IF !posts.length -->
 			<div class="alert alert-info">[[groups:details.has_no_posts]]</div>
 			<!-- ENDIF !posts.length -->

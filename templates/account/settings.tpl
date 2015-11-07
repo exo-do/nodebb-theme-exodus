@@ -1,6 +1,6 @@
 <div class="account">
-	<!-- IMPORT partials/account_menu.tpl -->
-	
+	<!-- IMPORT partials/account/header.tpl -->
+
 	<div class="row">
 		<div class="col-xs-12">
 			<!-- IF !disableCustomUserSkins -->
@@ -13,6 +13,27 @@
 				</select>
 			</div>
 			<!-- ENDIF !disableCustomUserSkins -->
+
+			<!-- IF allowUserHomePage -->
+			<h4>[[user:select-homepage]]</h4>
+			<div class="well">
+				<div class="form-group">
+					<label for="dailyDigestFreq">[[user:homepage]]</label>
+					<select class="form-control" data-property="homePageRoute">
+						<option value="none">None</option>
+						<!-- BEGIN homePageRoutes -->
+						<option value="{homePageRoutes.route}">{homePageRoutes.name}</option>
+						<!-- END homePageRoutes -->
+					</select>
+					<p class="help-block">[[user:homepage_description]]</p>
+				</div>
+				<div id="homePageCustom" class="form-group" style="display: none;">
+					<label for="homePageCustom">[[user:custom_route]]</label>
+					<input type="text" class="form-control" data-property="homePageCustom" id="homePageCustom" />
+					<p class="help-block">[[user:custom_route_help]]</p>
+				</div>
+			</div>
+			<!-- ENDIF allowUserHomePage -->
 
 			<h4>[[user:browsing]]</h4>
 			<div class="well">
@@ -142,11 +163,13 @@
 				{customSettings.content}
 			</div>
 			<!-- END customSettings -->
+
+			<div class="form-actions">
+				<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
+			</div>
 		</div>
 	</div>
 
-	<div class="form-actions">
-		<a id="submitBtn" href="#" class="btn btn-primary">[[global:save_changes]]</a>
-	</div>
+
 </div>
 

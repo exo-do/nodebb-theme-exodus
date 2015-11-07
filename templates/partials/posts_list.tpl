@@ -1,10 +1,19 @@
 <ul component="posts" class="posts-list" data-nextstart="{nextStart}">
 
 	<!-- BEGIN posts -->
-	<li component="post" class="posts-list-item" data-pid="{posts.pid}" data-uid="{posts.uid}">
+	<li component="post" class="posts-list-item row" data-pid="{posts.pid}" data-uid="{posts.uid}">
+		<div class="col-lg-11 col-sm-10 col-xs-9 post-body">
+			<a class="topic-title" href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">
+				<!-- IF !posts.isMainPost -->RE: <!-- ENDIF !posts.isMainPost -->{posts.topic.title}
+			</a>
 
-		<div class="panel panel-default">
-			<div class="panel-body">
+			<div component="post/content" class="content">
+				{posts.content}
+			</div>
+
+			<small class="topic-category">[[global:posted_in, <a href="{config.relative_path}/category/{posts.category.slug}">{posts.category.name}</a>]]</small>
+
+			<div class="post-info">
 				<a href="{config.relative_path}/user/{posts.user.userslug}">
 					<!-- IF posts.user.picture -->
 					<img title="{posts.user.username}" class="img-rounded user-img" src="{posts.user.picture}">
@@ -13,22 +22,12 @@
 					<!-- ENDIF posts.user.picture -->
 				</a>
 
-				<a href="{config.relative_path}/user/{posts.user.userslug}">
-					<strong><span>{posts.user.username}</span></strong>
-				</a>
-				<div component="post/content" class="content">
-					<p>{posts.content}</p>
-					<p class="fade-out"></p>
+				<div class="post-author">
+					<a href="{config.relative_path}/user/{posts.user.userslug}">{posts.user.username}</a><br />
+					<span class="timeago" title="{posts.relativeTime}"></span>
 				</div>
-				<small>
-					<span class="pull-right">
-						[[global:posted_in_ago, <a href="{config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]] &bull;
-						<a href="{config.relative_path}/topic/{posts.topic.slug}/{posts.index}">[[global:read_more]]</a>
-					</span>
-				</small>
 			</div>
 		</div>
-
 	</li>
 	<!-- END posts -->
 </ul>
