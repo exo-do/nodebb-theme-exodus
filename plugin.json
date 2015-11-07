@@ -1,6 +1,14 @@
 {
 	"id": "nodebb-theme-exodus",
-	"hooks": [],
+	"library": "./lib/theme.js",
+	"hooks": [
+			{
+				"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
+			},
+			{
+				"hook": "static:app.load", "method": "appLoad"
+			}
+	],
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
