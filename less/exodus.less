@@ -1,6 +1,6 @@
-//HEADER
+/* HEADER */
 
-/* navbar colors */
+// navbar colors 
 .header {
 	background-color: @navbar-bg;
 }
@@ -16,7 +16,7 @@
 	background-color: @navbar-icon;
 }
 
-/* mobile toogle */
+// mobile toogle 
 .navbar-default .navbar-toggle {
 	border: inherit;
 }
@@ -27,7 +27,7 @@
 	}
 }
 
-/* logo */
+// logo 
 .header .forum-logo {
 	margin-top: 10px;
 	width: 95px;
@@ -39,11 +39,105 @@
 	margin-right: 5px;
 }
 
-//STYLE
+/* STYLE */
+
+
 body {
 background: @bg-color; 	
 }
 
+a {
+color: @primary;
+}
+a:hover, a:focus {
+	color: black; //cambiar
+}
+//botones
+
+@color-fondo: #2e3539;
+@color-linea: #cf246a;
+@speed: 0.20s;
+@transition: all @speed ease;
+
+
+//exodus button
+.btn-default, .btn-primary, .btn-warning, .btn-danger, .btn-info {
+	
+	width: auto;
+	height: 27px;
+	line-height: 27px !important;
+	margin: auto;
+	color: #fff;
+	padding: 0 5px 0 5px !important;
+  	cursor: pointer;
+	overflow: hidden;
+	border-radius: 0px;
+	font-size: 13px !important;
+	vertical-align: middle;
+	background-color: @color-fondo !important;
+  	border-left: 5px solid @color-linea !important;
+  	border-top: 0 !important;
+  	border-bottom: 0 !important;
+  	border-right: 0 !important;
+  
+  	span, a {
+		color: inherit;
+		line-height: inherit;
+		vertical-align:inherit;
+	    font-size: 13px;
+	}
+  
+  	.fa {
+    	line-height: inherit;
+	    vertical-align:inherit;
+	    min-width: 25px;
+	    font-size: 16px;
+		margin-top: -3px;
+  }
+ 
+  	&:hover , &:focus{
+		
+		color: #fff !important;
+		box-shadow: 0 0 0 2px #e4e4e4;
+		text-decoration: none;
+	  	
+		.fa {
+      	  //	-webkit-transform: scale(1.2);
+      		//-moz-transform: scale(1.2);
+      	  	//-ms-transform: scale(1.2);
+      	  	//-o-transform: scale(1.2);
+      	}
+	}
+  
+}
+
+//boostrap want to keep button text on black
+.open > .dropdown-toggle.btn-default {
+	color: #fff !important;
+}
+
+//composer caret color
+.composer .dropdown-toggle .caret{
+	background-color: @color-fondo !important;
+	color: #fff;
+	&:hover, &:focus{
+		background-color: @color-fondo !important;
+	}
+}
+
+//navpills
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+	background-color: @primary;
+}
+
+/* TOPIC */
+
+.btn-xs { //a medias
+font-size: 12px !important;
+line-height: 1.5 !important;
+background-color: #fff;
+}
 
 // modules/NPROGRESS
 #nprogress .bar {
@@ -53,4 +147,5 @@ background: @bg-color;
     border-top-color: @primary;
     border-left-color: @primary;
 }
+
 
