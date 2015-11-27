@@ -1,4 +1,6 @@
-/* HEADER */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+/* -------------------------------------- HEADER ----------------------------------------*/
 
 // navbar colors 
 .header {
@@ -39,18 +41,24 @@
 	margin-right: 5px;
 }
 
-/* STYLE */
+/* -------------------------------------- STYLE ----------------------------------------*/
 
 
 body {
-background: @bg-color; 	
+	background: @bg-color; 	
+	font-family: @exodo-font-family;
+	font-size: 13px;
 }
 
 a {
-color: @primary;
+	color: @primary;
 }
 a:hover, a:focus {
 	color: black; //cambiar
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: bold;
 }
 //botones
 
@@ -131,7 +139,7 @@ a:hover, a:focus {
 	background-color: @primary;
 }
 
-/* TOPIC */
+/* -------------------------------------- TOPIC ----------------------------------------*/
 
 .btn-xs { //a medias
 font-size: 12px !important;
@@ -139,6 +147,105 @@ line-height: 1.5 !important;
 background-color: #fff;
 }
 
+.topic h1 {
+	text-align: center;
+	color: @primary;
+	span:first-letter{
+		text-transform: uppercase;
+	}
+}
+
+.topic .posts .icon {
+	margin-top: 0px !important;
+}
+.topic .posts .icon img, .topic .posts .icon .user-icon {
+	float: none;
+	padding: 0;
+	border-radius: 0;
+	border: 0 solid;
+	min-height: 128px;
+	min-width: 128px;
+	height: 128px;
+	width: 128px;
+	margin-top: 0px;
+	margin-right: 0px;
+}
+
+.topic .posts .post-header{
+	background: @topic-header;
+	display: block;
+	line-height: 30px;
+	width: 100%;
+
+	.username a {
+		font-size: 15px;
+		color: @topic-header-text;
+		cursor: pointer;
+		font-weight: normal;
+		word-wrap: break-word;
+		padding-left: 5px;
+	}
+}
+
+//toPID button
+.btn-parent {
+	float:right;
+	font-size: 11px !important;
+	background-color: @topic-details !important;
+  	border-left: none !important;
+	color: black;
+  	.fa {
+	    font-size: 13px;
+	}
+  	&:hover , &:focus{
+		
+		color: black !important;
+		box-shadow: 0 0 0 2px #e4e4e4;
+		text-decoration: none;
+  	}
+}
+
+.topic .post-details {
+	float: left;
+	text-align: center;
+	background-color: @topic-details;
+	background-image: @pattern;
+}
+.topic .content {
+	padding: 15px 15px 0px 15px;
+	margin-top: 0px !important;
+	margin-left: 0px !important;
+	background-color: @topic-content;
+	@media (min-width: @screen-xs-max /*  767px*/) {min-height: 128px;}
+}
+.topic .time {
+	padding: 5px 15px 5px 5px;
+	text-align: right;
+	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
+	background-color: @topic-content;
+	
+}
+.topic .post-signature {
+	margin-left: 128px;
+	background-color: @topic-content;
+	padding-left: 5px;
+}
+.topic .box {
+	background-color: @topic-details;
+	background-image: @pattern;
+}
+
+.topic .postbar small{
+	background-color: @topic-details !important;
+	display: block;
+	line-height: 30px;
+	width: 100% !important;
+	text-align: right;
+	background-image: @pattern;
+}
+
+
+/* -------------------------------------- MODULES ----------------------------------------*/
 // modules/NPROGRESS
 #nprogress .bar {
   	background: @primary
