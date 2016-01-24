@@ -1,3 +1,107 @@
+<!-- IF config.usePagination -->
+<script type="text/javascript">
+
+jQuery(function ($) {
+	
+	'use strict';
+	
+	(function () {
+	var $frame  = $('#basic');
+	var $slidee = $frame.children('ul').eq(0);	
+	var $wrap   = $frame.parent();
+	
+	
+	var options = {
+	  	horizontal: 1,
+		itemNav: 'basic',
+		smart: 1,
+		activateOn: 'click',
+		mouseDragging: 1,
+		touchDragging: 1,
+		releaseSwing: 1,
+		//startAt: 0,
+		scrollBar: $wrap.find('.scrollbar'),
+		scrollBy: 2,
+		scrollTrap: true, 
+		pagesBar: $wrap.find('.pages'),
+		activatePageOn: 'click',
+		speed: 200,
+		moveBy: 300,
+		elasticBounds: 1,
+		dragHandle: 1,
+		dynamicHandle: 1,
+		clickBar: 1, 
+		keyboardNavBy: 'items', 
+		//forward: $wrap.find('.forward'),
+		//backward: $wrap.find('.backward'),
+		//prev: $wrap.find('.prev'),
+		//next: $wrap.find('.next'),
+		prevPage: $wrap.find('.prevPage'),
+		nextPage: $wrap.find('.nextPage')
+	
+  	};
+	var fn,fn1,fn2;
+  	var sly = new Sly('#basic', options, {
+    	load: function () {
+    		this.activate(this.getIndex($wrap.find('.active')));
+		},
+		move: [
+			function () {},
+	        function () {}
+		] 
+    }).init();
+	
+	// To Start button
+	/*
+	$wrap.find('.toStart').on('click', function () {
+		$frame.sly('toStart');
+		$frame.sly('activate',0);
+		$frame2.sly('toStart');
+		$frame2.sly('activate',0);
+	});
+	$wrap.find('.toEnd').on('click', function () {
+		$frame.sly('toEnd');
+		$frame.sly('activate',sly.items.length - 1);
+		$frame2.sly('toEnd');
+		$frame2.sly('activate',sly.items.length - 1);
+	});
+	
+	$wrap2.find('.toStart').on('click', function () {
+		$frame.sly('toStart');
+		$frame.sly('activate',0);
+		$frame2.sly('toStart');
+		$frame2.sly('activate',0);
+	});
+	$wrap2.find('.toEnd').on('click', function () {
+		$frame.sly('toEnd');
+		$frame.sly('activate',sly.items.length - 1);
+		$frame2.sly('toEnd');
+		$frame2.sly('activate',sly.items.length - 1);
+	});
+	
+	$wrap2.find('.prev').on('click', function () {
+		sly.activate(sly.getIndex($wrap.find('.active'))-1);
+		sly2.activate(sly2.getIndex($wrap2.find('.active'))-1);
+	});
+	$wrap.find('.prev').on('click', function () {
+		sly.activate(sly.getIndex($wrap.find('.active'))-1);
+		sly2.activate(sly2.getIndex($wrap2.find('.active'))-1);
+	});
+	$wrap2.find('.next').on('click', function () {
+		sly.activate(sly.getIndex($wrap.find('.active'))+1);
+		sly2.activate(sly2.getIndex($wrap2.find('.active'))+1);
+	});
+	$wrap.find('.next').on('click', function () {
+		sly.activate(sly.getIndex($wrap.find('.active'))+1);
+		sly2.activate(sly2.getIndex($wrap2.find('.active'))+1);
+	});
+	*/
+
+	}());	
+});
+</script>
+<!-- ENDIF config.usePagination -->
+
 <div class="row">
 <div class="topic col-lg-12">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
@@ -38,6 +142,17 @@
 	</ul>
 
 	<!-- IF config.usePagination -->
+	
+	<div class="example">
+	<div class="scrollbar">
+		<div class="handle">
+			<div class="mousearea"></div>
+		</div>
+	</div>
+	
+	<div id="basic" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
+	<ul class="slidee">
+	
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 

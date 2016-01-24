@@ -13,6 +13,7 @@
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/slideout.min.js"
+		"lib/modules/slideout-notouch.min.js",
+		"lib/sly.min.js"
 	]
 }
