@@ -3,7 +3,6 @@
 		<li class="previous pull-left<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
 			<a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
 		</li>
-
 		<!-- BEGIN pages -->
 			<!-- IF pagination.pages.separator -->
 			<li class="page select-page">
@@ -44,7 +43,7 @@
 
 	<!--<ul class="pages"></ul>-->
 	
- 	<div class="controls">
+ 	<!--<div class="controls <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	
 		
  				<button class="toStart"><a href="?page=1"><i class="fa fa-angle-double-left"></i>Start</a></button>
@@ -55,3 +54,4 @@
  				<span class="divider hidden-xs"></span>
 				<button class="toEnd"><a id="end" href="?page={pagination.pageCount}"  style="display:block;">End <i class="fa fa-angle-double-right"></i></button>
  	</div>
+-->

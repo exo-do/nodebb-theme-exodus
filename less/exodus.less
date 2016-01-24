@@ -140,6 +140,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	background-color: @primary;
 }
 
+
+//progress bar
+
+.progress-bar {
+//background-color: @primary !important;
+}
+.topic .pagination-block .wrapper {
+    padding: 3px 0px;
+}
+
+
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
 .btn-xs {
@@ -288,15 +299,23 @@ background-color: #fff;
 //paginacion nueva de exodo
 //.example { margin: 80px auto 40px; }
 
-.example button, .example button { background: transparent; border: 0; color: black; opacity: .5;}
- .example button a { color:black;}
+.example button { background: transparent; border: 0; color: black; opacity: .5;}
+.example button a { color:black;}
 //.example button:hover, .example button:hover { opacity: 1; }
 //.example button:disabled, .example button:disabled { opacity: .2; }
 
-.example .forward, .example .backward { float: left; width: 5%; height: 50px; font-size: 30px; }
-.example .forward { float: right; }
+.example .forward, .example .backward { float: left; 
 
-.example .frame { margin: 0 auto; width: 100%; height: 25px; line-height: 50px; overflow: hidden; text-shadow: none; }
+	width: 5%;
+	height: 25px;
+	line-height: 20px;
+	font-size: 20px;
+	padding: 2px 0px 3px 0px;
+ }
+.example .forward { float: right; 
+}
+
+.example .frame { margin: 0 auto; width: 85%; height: 25px; line-height: 50px; overflow: hidden; text-shadow: none; }
 .example .frame ul { list-style: none; margin: 0; padding: 0; height: 100%; font-size: 15px; }
 .example .frame ul li { float: left; width: 50px; height: 100%; margin: 0 1px 0 0; background: #eee; text-align: center; cursor: pointer; }
 .example .frame ul li.active { color: #fff; background: @primary; }
@@ -321,13 +340,13 @@ background-color: #fff;
 .example .controls button { line-height: 32px; vertical-align: middle; font-family: Novecento, sans-serif; }
 .example .controls button i { position: relative; top: -2px; margin: 0px; padding: 0; font-size: 32px; vertical-align: middle; }
 
-
-
-
 /* -------------------------------------- MODULES ----------------------------------------*/
 // modules/NPROGRESS
 #nprogress .bar {
   	background: @primary
+}
+#nprogress .peg {
+    box-shadow: 0 0 10px @primary, 0 0 5px @primary;
 }
 #nprogress .spinner-icon {
     border-top-color: @primary;
