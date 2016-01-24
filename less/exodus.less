@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		vertical-align:inherit;
 	    font-size: 13px;
 	}
-  
+	
   	.fa {
     	line-height: inherit;
 	    vertical-align:inherit;
@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		box-shadow: 0 0 0 2px #e4e4e4;
 		text-decoration: none;
 	  	
+		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 		.fa {
       	  //	-webkit-transform: scale(1.2);
       		//-moz-transform: scale(1.2);
@@ -141,7 +142,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
-.btn-xs { //a medias
+.btn-xs {
 font-size: 12px !important;
 line-height: 1.5 !important;
 background-color: #fff;
@@ -216,11 +217,13 @@ background-color: #fff;
 	margin-top: 0px !important;
 	margin-left: 0px !important;
 	background-color: @topic-content;
+	border-right: 1px solid @topic-border;
 	@media (min-width: @screen-xs-max /*  767px*/) {min-height: 128px;}
 }
 .topic .time {
 	padding: 5px 15px 5px 5px;
 	text-align: right;
+	border-right: 1px solid @topic-border;
 	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
 	background-color: @topic-content;
 	
@@ -228,14 +231,16 @@ background-color: #fff;
 .topic .post-signature {
 	margin-left: 128px;
 	background-color: @topic-content;
+	border-right: 1px solid @topic-border;
 	padding-left: 5px;
+	padding-right: 5px;
 }
 .topic .box {
 	background-color: @topic-details;
 	background-image: @pattern;
 }
 
-.topic .postbar small{
+.topic .links-bar small{
 	background-color: @topic-details !important;
 	display: block;
 	line-height: 30px;
@@ -244,6 +249,36 @@ background-color: #fff;
 	background-image: @pattern;
 }
 
+.topic .links-bar a {
+	color: @topic-links;
+	font-size: 12px;
+}
+
+.topic .index {
+	top: 0px;
+	position: absolute;
+	right: 10px;
+	font-size: 13px;
+	color: @topic-header-text;
+}
+.topic .votes {
+	padding-right: 5px;
+	
+	a {
+		padding: 3px;
+	}
+}
+
+.topic .links-bar {
+	border-bottom: 1px solid @topic-border; 
+}
+
+//bookmark HR easeinout
+.topic hr {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-top: 3px solid transparent;
+}
 
 /* -------------------------------------- MODULES ----------------------------------------*/
 // modules/NPROGRESS

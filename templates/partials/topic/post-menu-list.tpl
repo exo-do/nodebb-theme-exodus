@@ -39,7 +39,7 @@
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
 
-<li role="presentation">
+<!--<li role="presentation">
 	<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}">
 
 		<span class="favourite-text">[[topic:favourite]]</span>
@@ -49,9 +49,9 @@
 		<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
 	</a>
 </li>
+-->
 
 <!-- IF !config.disableSocialButtons -->
-<li role="presentation" class="divider"></li>
 <li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
 <li role="presentation">
 	<a role="menuitem" class="facebook-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-facebook"></i></span> Facebook</a>

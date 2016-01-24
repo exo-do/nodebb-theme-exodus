@@ -7,6 +7,9 @@
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 			
 		</div>
+
+		
+		<span class="index"><strong>{posts.index}</strong></span>
 	</div>
 	<div class="post-details">
 	
@@ -66,7 +69,6 @@
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</div>
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 
 	</small>
 	
@@ -94,14 +96,19 @@
 
 
 
-
-<div class="postbar">
-	
-
-	<small class="pull-right">
+<div class="links-bar">
+	<small>
 		<span class="post-tools">
-			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
-			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>&nbsp;&nbsp;[[topic:reply]]</a>
+			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>&nbsp;&nbsp;[[topic:quote]]</a>
+			
+			<a component="post/favourite" href="#"  class="no-select" data-favourited="{posts.favourited}">
+
+				<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
+				<i component="post/favourite/off" class="fa fa-heart-o <!-- IF posts.favourited -->hidden<!-- ENDIF posts.favourited -->"></i>
+				&nbsp;
+				<span component="post/favourite-count" class="favouriteCount" data-favourites="{posts.reputation}">{posts.reputation}</span>
+			</a>
 		</span>
 
 		<!-- IF !reputation:disabled -->
@@ -117,11 +124,14 @@
 				<i class="fa fa-chevron-down"></i>
 			</a>
 			<!-- ENDIF !downvote:disabled -->
-			<!-- ENDIF !reputation:disabled -->
+			
 		</span>
+		<!-- ENDIF !reputation:disabled -->
+		
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
 </div>
 
 <hr />
+<br />

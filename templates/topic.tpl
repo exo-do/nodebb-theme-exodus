@@ -29,12 +29,13 @@
 
 				<!-- IMPORT partials/topic/post.tpl -->
 			</li>
-		<!-- END posts -->
-	</ul>
 
-	<div class="post-bar">
-		<!-- IMPORT partials/post_bar.tpl -->
-	</div>
+		<!-- END posts -->
+
+		<div class="post-bar">
+			<!-- IMPORT partials/post_bar.tpl -->
+		</div>
+	</ul>
 
 	<!-- IF config.usePagination -->
 	<!-- IMPORT partials/paginator.tpl -->
