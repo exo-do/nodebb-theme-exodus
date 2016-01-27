@@ -128,8 +128,8 @@ jQuery(function ($) {
 	<hr class="visible-xs" />
 
 	<!-- IF config.usePagination -->
-	<div class="example">
-	<div class="scrollbar">
+	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
+	<div class="scrollbar visible-xs">
 		<div class="handle">
 			<div class="mousearea"></div>
 		</div>
@@ -156,14 +156,15 @@ jQuery(function ($) {
 
 		<!-- END posts -->
 
-		<div class="post-bar">
-			<!-- IMPORT partials/post_bar.tpl -->
-		</div>
 	</ul>
 
+	<div class="post-bar">
+		<!-- IMPORT partials/post_bar.tpl -->
+	</div>
+	
 	<!-- IF config.usePagination -->
-	<div class="example">
-	<div class="scrollbar">
+	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
+	<div class="scrollbar visible-xs">
 		<div class="handle">
 			<div class="mousearea"></div>
 		</div>
@@ -173,7 +174,6 @@ jQuery(function ($) {
 	
 	<div id="basic" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="slidee">
-	
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 

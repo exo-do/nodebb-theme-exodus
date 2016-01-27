@@ -142,7 +142,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 
 //progress bar
-
 .progress-bar {
 //background-color: @primary !important;
 }
@@ -151,12 +150,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 
+
 /* -------------------------------------- TOPIC ----------------------------------------*/
+
 
 .btn-xs {
 font-size: 12px !important;
 line-height: 1.5 !important;
-background-color: #fff;
+background-color: #fff; //cambiar blanco a variable
 }
 
 .topic h1 {
@@ -297,7 +298,7 @@ background-color: #fff;
 
 /* -------------------------------------- PAGINACION ----------------------------------------*/
 //paginacion nueva de exodo
-//.example { margin: 80px auto 40px; }
+.example { margin: 5px auto 5px auto; }
 
 .example button { background: transparent; border: 0; color: black; opacity: .5;}
 .example button a { color:black;}
@@ -324,7 +325,7 @@ background-color: #fff;
 .example .frame ul li a:hover { color: @topic-header; }
 .example .frame ul li.active a:hover { color: #fff }
 
-.example .scrollbar { margin: 0 auto 10px; width: auto; height: 5px; line-height: 0; }
+.example .scrollbar { margin: 0 auto 2px; width: auto; height: 5px; line-height: 0; }
 .example .scrollbar .handle { width: 100px; height: 100%; background: @topic-header; cursor: pointer; }
 .example .scrollbar .handle .mousearea { position: absolute; top: -9px; left: 0; width: 100%; height: 50px; }
 
@@ -339,6 +340,166 @@ background-color: #fff;
 .example .controls .divider { display: inline-block; margin: 0 10px; }
 .example .controls button { line-height: 32px; vertical-align: middle; font-family: Novecento, sans-serif; }
 .example .controls button i { position: relative; top: -2px; margin: 0px; padding: 0; font-size: 32px; vertical-align: middle; }
+
+
+/* -------------------------------------- CATEGORY ----------------------------------------*/
+.category {
+
+	.topic-list {
+		margin-top: 0px;
+	}
+	
+	> ul {
+		
+		> li {
+			padding-top: 0px; 
+			padding-bottom: 0px;
+			min-height: 52px; 
+			border-bottom: 1px solid #ddd  !important;
+			border-left: 1px solid #ddd ;
+			border-right: 1px solid #ddd ;
+			list-style: none;
+			background-color: #f0f0f0; //cambiar
+			
+			.teaser {
+				width: 30%;
+				.card {
+					height: 45px;
+					padding-top: 3px;
+				
+					.post-content {
+						font-size:11px;
+					}
+				}
+			}
+			
+			.content {
+			
+				padding-left: 15px;
+				padding-right: 10px;
+				
+				h2 {
+					margin-left: 55px;
+					line-height: 15px;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					a {
+						font-size: 13px;
+					}
+				}
+				
+				.avatar {
+				padding-top: 5px;
+				
+				.user-icon,.user-img {
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					margin-right: 0px;
+					}
+				}
+			}
+			&:last-child li {
+				border-bottom: 1px solid #ddd !important;
+			}
+		}		
+	}
+	
+	
+	.category-bar {
+		background: @topic-header;
+		display: block;
+		line-height: 30px;
+		width: auto;
+		margin-left: -15px;
+		margin-right: -15px;
+		
+		p {
+			color: #fff; //cambiar
+			margin: 0;
+			text-align: center;
+			font-size: 15px;
+		}
+	}
+	
+
+	.stats {
+		line-height: 15px;
+		padding-top: 5px;
+		margin-top: 5px;
+		font-size: 15px;
+		width: 5%;
+		padding-right: 2px;
+		padding-left: 2px;
+		small {
+			font-size: 12px;
+		}
+	}
+	
+	.teaser {
+		//width: 30%;
+	}
+}			
+
+
+
+/* -------------------------------------- COMPOSER ----------------------------------------*/
+
+/*Custom Composer Bar Tweak by Arc begin*/
+.composer .resizer .trigger i:before {
+content: "\f0c9";
+cursor: n-resize;
+}
+.composer.maximized .resizer .trigger i:before {
+content: "\f0c9";
+cursor: n-resize;
+}
+.composer .resizer {
+position: absolute;
+width: 100%;
+top: 10px;
+height: 0;
+cursor: n-resize;
+}
+.composer .resizer .trigger i {
+margin-left: -10%;
+position: relative;
+color: #FFF;
+font-size: 14px;
+}
+.composer .resizer .trigger {
+position: relative;
+display: block;
+width: 110%;
+height: 20px;
+top: -10px;
+margin: 0 auto;
+margin-left: -11px;
+background: #000;
+background: rgba(0,0,0,0.1);
+border: 0 solid #E4E4E4;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+-ms-border-radius: 50%;
+-o-border-radius: 50%;
+border-radius: 0;
+line-height: 20px;
+-o-transition:.3s ease-in-out;
+-ms-transition:.3 ease-in-outs;
+-moz-transition:.3s ease-in-out;
+-webkit-transition:.3s ease-in-out;
+transition:.3s ease-in-out;
+}
+.composer .resizer .trigger:hover {
+background: #000;
+background: rgba(0,0,0,0.2);
+-o-transition:.3s ease-in-out;
+-ms-transition:.3 ease-in-outs;
+-moz-transition:.3s ease-in-out;
+-webkit-transition:.3s ease-in-out;
+transition:.3s ease-in-out;
+}
+/*Custom Composer Bar Tweak by Arc end*/
 
 /* -------------------------------------- MODULES ----------------------------------------*/
 // modules/NPROGRESS

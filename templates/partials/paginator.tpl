@@ -40,7 +40,7 @@
 	</ul>
 
 </div>
-
+</div>
 	<!--<ul class="pages"></ul>-->
 	
  	<!--<div class="controls <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">

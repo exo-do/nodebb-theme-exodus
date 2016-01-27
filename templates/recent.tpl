@@ -14,8 +14,10 @@
 	</div>
 
 	<hr class="hidden-xs"/>
-
+	
 	<div class="category">
+
+		<div class="category-bar"><p class="hidden-xs">[[pages:recent]]</p></div>
 		<!-- IF !topics.length -->
 		<div class="alert alert-warning" id="category-no-topics">[[recent:no_recent_topics]]</div>
 		<!-- ENDIF !topics.length -->
