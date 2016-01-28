@@ -134,8 +134,8 @@ jQuery(function ($) {
 			<div class="mousearea"></div>
 		</div>
 	</div>
-	<button class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></button>
-	<button class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></button>
+	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
+	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
 	
 	<div id="basic2" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="slidee">
@@ -169,8 +169,8 @@ jQuery(function ($) {
 			<div class="mousearea"></div>
 		</div>
 	</div>
-	<button class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></button>
-	<button class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></button>
+	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
+	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
 	
 	<div id="basic" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="slidee">

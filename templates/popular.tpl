@@ -1,6 +1,26 @@
+
+<script>
+jQuery(document).ready(function($){
+	//open the lateral panel
+	$('.cd-btn').on('click', function(event){
+		event.preventDefault();
+		$('.cd-panel').addClass('is-visible');
+	});
+	//clode the lateral panel
+	$('.cd-panel').on('click', function(event){
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+			$('.cd-panel').removeClass('is-visible');
+			event.preventDefault();
+		}
+	});
+});
+</script>
+
+<main class="cd-main-content">
+	
 <div class="popular">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
+	<a href="#0" class="cd-btn pull-right">Fire Panel</a>
 	<ul class="nav nav-pills">
 		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>
 		<li><a href='{config.relative_path}/popular/weekly'>[[recent:week]]</a></li>
@@ -18,3 +38,14 @@
 		<!-- IMPORT partials/topics_list.tpl -->
 	</div>
 </div>
+</main>
+
+<div class="cd-panel from-right">
+	
+ 
+	<div class="cd-panel-container">
+		<div class="cd-panel-content">
+			<!-- IMPORT unread.tpl -->
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->
