@@ -77,7 +77,7 @@ jQuery(function ($) {
 	</div>
 
 	<hr class="hidden-xs" />
-
+	<br class="visible-xs" />
 	<div class="category-bar"><p class="hidden-xs">{name}</p></div>
 
 	<!-- IF !topics.length -->

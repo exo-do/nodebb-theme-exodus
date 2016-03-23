@@ -307,7 +307,7 @@ background-color: #fff; //cambiar blanco a variable
 
 .example .forward, .example .backward { float: left; 
 
-	width: 5%;
+	//width: 5%;
 	height: 25px;
 	line-height: 20px;
 	font-size: 20px;
@@ -355,14 +355,14 @@ background-color: #fff; //cambiar blanco a variable
 			padding-top: 0px; 
 			padding-bottom: 0px;
 			min-height: 52px; 
-			border-bottom: 1px solid #ddd  !important;
+			border-top: 1px solid #ddd  !important;
 			border-left: 1px solid #ddd ;
 			border-right: 1px solid #ddd ;
 			list-style: none;
 			background-color: #f0f0f0; //cambiar
 			
 			.teaser {
-				width: 30%;
+				//width: 30%;
 				.card {
 					height: 45px;
 					padding-top: 3px;
@@ -398,8 +398,14 @@ background-color: #fff; //cambiar blanco a variable
 					margin-right: 0px;
 					}
 				}
+				
+				.icon {
+					min-width: 40px;
+					min-height: 40px;
+					margin-top: 3px
+				}
 			}
-			&:last-child li {
+			&:last-child {
 				border-bottom: 1px solid #ddd !important;
 			}
 		}		
@@ -436,52 +442,140 @@ background-color: #fff; //cambiar blanco a variable
 		}
 	}
 	
-	.teaser {
-		//width: 30%;
-	}
 }			
 
 
+/* -------------------------------------- CATEGORIES ----------------------------------------*/
 
-/* -------------------------------------- SIDEBAR ----------------------------------------*/
+.categories {
+	
+	> li {
+		padding-top: 0px; 
+		padding-bottom: 0px;
+		min-height: 52px; 
+		border-top: 1px solid #ddd  !important;
+		border-left: 1px solid #ddd ;
+		border-right: 1px solid #ddd ;
+		list-style: none;
+		background-color: #f0f0f0; //cambiar
+		
+		.teaser {
+			//width: 30%;
+			.card {
+				height: 45px;
+				padding-top: 3px;
+			
+				.post-content {
+					font-size:11px;
+				}
+			}
+		}
+		
+		.content {
+		
+			padding-left: 15px;
+			padding-right: 10px;
+			
+			h2 {
+				margin-left: 55px;
+				line-height: 15px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				a {
+					font-size: 13px;
+				}
+			}
+			
+			.avatar {
+			padding-top: 5px;
+			
+			.user-icon,.user-img {
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				margin-right: 0px;
+				}
+			}
+			
+			.icon {
+				min-width: 40px;
+				min-height: 40px;
+				margin-top: 3px
+			}
+		}
+		&:last-child {
+			border-bottom: 1px solid #ddd !important;
+		}
+		
+	}
+		
+	
+	
 
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-*, *::after, *::before {
-  //-webkit-box-sizing: border-box;
-  //-moz-box-sizing: border-box;
-  //box-sizing: border-box;
+	.stats {
+		line-height: 15px;
+		padding-top: 5px;
+		margin-top: 5px;
+		font-size: 15px;
+		width: 5%;
+		padding-right: 2px;
+		padding-left: 2px;
+		small {
+			font-size: 12px;
+		}
+	}
+	
 }
 
-*::after, *::before {
-  //content: '';
+.subcategory .categories li {
+	border-bottom: 1px solid #ddd !important;
+}
+.categories-bar {
+	background: @topic-header;
+	display: block;
+	line-height: 30px;
+	width: auto;
+	margin-left: -15px;
+	margin-right: -15px;
+	
+	p {
+		color: #fff; //cambiar
+		margin: 0;
+		text-align: center;
+		font-size: 15px;
+	}
 }
 
 
-/* -------------------------------- 
 
-Main components 
-
--------------------------------- */
-
-
-.cd-main-content {
-  //text-align: center;
+/* -------------------------------------- MODULES ----------------------------------------*/
+// modules/NPROGRESS
+#nprogress .bar {
+  	background: @primary
 }
-.cd-main-content h1 {
-  //font-size: 20px;
-  //font-size: 1.25rem;
-  //color: #64788c;
-  //padding: 4em 0;
+#nprogress .peg {
+    box-shadow: 0 0 10px @primary, 0 0 5px @primary;
 }
-.cd-main-content .cd-btn {
-  position: relative;
+#nprogress .spinner-icon {
+    border-top-color: @primary;
+    border-left-color: @primary;
+}
+
+
+
+/* -------------------------------------- SLIDEOUT ----------------------------------------*/
+
+
+.cd-btn {
+	
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+  //position: relative;
   display: inline-block;
   padding: 1em 2em;
-  background-color: #89ba2c;
+  background-color: @topic-header;
   color: #ffffff;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -502,6 +596,21 @@ Main components
   }
 }
 
+
+
+.bar {
+	background: @topic-header;
+	display: block;
+	line-height: 30px;
+	width: 100%;
+	
+	p {
+		color: #fff; //cambiar
+		margin: 0;
+		text-align: center;
+		font-size: 15px;
+	}
+}
 .cd-panel {
   position: fixed;
   top: 0;
@@ -611,48 +720,6 @@ Main components
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-  }
-}
-.cd-panel-header {
-  position: fixed;
-  width: 90%;
-  height: 50px;
-  line-height: 50px;
-  background: rgba(255, 255, 255, 0.96);
-  z-index: 2;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-  -webkit-transition: top 0.3s 0s;
-  -moz-transition: top 0.3s 0s;
-  transition: top 0.3s 0s;
-}
-.cd-panel-header h1 {
-  font-weight: bold;
-  color: #89ba2c;
-  padding-left: 5%;
-}
-.from-right .cd-panel-header, .from-left .cd-panel-header {
-  top: -50px;
-}
-.from-right .cd-panel-header {
-  right: 0;
-}
-.from-left .cd-panel-header {
-  left: 0;
-}
-.is-visible .cd-panel-header {
-  top: 0;
-  -webkit-transition: top 0.3s 0.3s;
-  -moz-transition: top 0.3s 0.3s;
-  transition: top 0.3s 0.3s;
-}
-@media only screen and (min-width: 768px) {
-  .cd-panel-header {
-    width: 70%;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-panel-header {
-    width: 50%;
   }
 }
 
@@ -803,19 +870,6 @@ Main components
     font-size: 1rem;
     line-height: 1.6;
   }
-}
-
-/* -------------------------------------- MODULES ----------------------------------------*/
-// modules/NPROGRESS
-#nprogress .bar {
-  	background: @primary
-}
-#nprogress .peg {
-    box-shadow: 0 0 10px @primary, 0 0 5px @primary;
-}
-#nprogress .spinner-icon {
-    border-top-color: @primary;
-    border-left-color: @primary;
 }
 
 

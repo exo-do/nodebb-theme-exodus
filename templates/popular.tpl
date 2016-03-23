@@ -16,6 +16,18 @@ jQuery(document).ready(function($){
 });
 </script>
 
+<script>
+	require(['translator'], function (translator) {
+		$.getJSON('/api/recent', function (json) {
+			templates.parse('recent', json, function (html) {
+				translator.translate(html, function (translated) {
+	  				$(translated).appendTo('#contenido');
+	  	  		});
+	  	  	});
+	 	});
+	});
+</script>
+
 <main class="cd-main-content">
 	
 <div class="popular">
@@ -44,8 +56,8 @@ jQuery(document).ready(function($){
 	
  
 	<div class="cd-panel-container">
-		<div class="cd-panel-content">
-			<!-- IMPORT unread.tpl -->
+		<div id="contenido" class="cd-panel-content">
+			
 		</div> <!-- cd-panel-content -->
 	</div> <!-- cd-panel-container -->
 </div> <!-- cd-panel -->

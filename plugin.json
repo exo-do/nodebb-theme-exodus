@@ -7,13 +7,21 @@
 			},
 			{
 				"hook": "static:app.load", "method": "appLoad"
+			},
+			{
+				"hook": "action:post.save", "method": "posteando"
 			}
 	],
+	"staticDirs": {
+			"static": "./static"
+		},
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout-notouch.min.js",
-		"lib/sly.min.js"
+		"lib/sly.min.js",
+		"lib/sly-default.js",
+		"static/lib/sly.js"
 	]
 }

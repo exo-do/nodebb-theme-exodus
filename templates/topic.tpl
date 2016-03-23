@@ -106,10 +106,43 @@ jQuery(function ($) {
 </script>
 <!-- ENDIF config.usePagination -->
 
+
+<script>
+jQuery(document).ready(function($){
+	//open the lateral panel
+	$('.cd-btn').on('click', function(event){
+		$('.cd-panel').addClass('is-visible');
+	});
+	//close the lateral panel
+	$('.cd-panel').on('click', function(event){
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+			$('.cd-panel').removeClass('is-visible');
+		}
+	});
+});
+</script>
+
+<script>
+//var plantilla = '/api/category/{category.slug}';
+var plantilla = '/api/recent';
+	require(['translator'], function (translator) {
+		$.getJSON(plantilla, function (json) {
+			templates.parse('last', json, function (html) {
+				translator.translate(html, function (translated) {
+	  				$(translated).appendTo('#contenido');
+	  	  		});
+	  	  	});
+	 	});
+	});
+</script>
+
+<main class="cd-main-content">
+	
 <div class="row">
 <div class="topic col-lg-12">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-
+	<a href="#" class="cd-btn pull-right"><i class="fa fa-clock-o"></i></a>
+	
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
 
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
@@ -126,7 +159,7 @@ jQuery(function ($) {
 	<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
 
 	<hr class="visible-xs" />
-
+	
 	<!-- IF config.usePagination -->
 	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<div class="scrollbar visible-xs">
@@ -194,3 +227,14 @@ jQuery(function ($) {
 	<!-- IMPORT partials/paginator.tpl -->
 </noscript>
 <!-- ENDIF !config.usePagination -->
+</main>
+
+<div class="cd-panel from-right">
+	
+ 
+	<div class="cd-panel-container">
+		<div id="contenido" class="cd-panel-content">
+			
+		</div> <!-- cd-panel-content -->
+	</div> <!-- cd-panel-container -->
+</div> <!-- cd-panel -->

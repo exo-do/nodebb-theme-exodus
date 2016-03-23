@@ -1,5 +1,6 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
-<h1 class="categories-title">[[pages:categories]]</h1>
+	<div class="categories-bar"><p class="hidden-xs">[[pages:categories]]</p></div>
+
 <ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 	<!-- BEGIN categories -->
 	<!-- IMPORT partials/categories/item.tpl -->
