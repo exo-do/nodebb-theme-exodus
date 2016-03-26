@@ -1,41 +1,35 @@
 {
   "name": "nodebb-theme-exodus",
-  "version": "4.0.43",
+  "version": "4.0.44",
  "nbbpm": {
+    "id": "nodebb-theme-exodus",
+    "name": "Theme Exodus",
+    "type": "theme",
     "compatibility": "^0.8.2 || ^0.9.0"
   },
-  "description": "Persona theme for NodeBB",
+  "description": "Persona theme for NodeBB by Exodo",
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/psychobunny/nodebb-theme-persona"
+    "url": "https://github.com/exo-do/nodebb-theme-exodus"
   },
   "keywords": [
     "nodebb",
     "theme",
     "forum",
     "bootstrap",
-    "responsive"
+    "responsive",
+    "exodo"
   ],
   "contributors": [
     {
-      "name": "Andrew Rodrigues",
-      "email": "andrew@designcreateplay.com",
-      "url": "https://github.com/psychobunny"
-    },
-    {
-      "name": "Julian Lam",
-      "email": "julian@designcreateplay.com",
-      "url": "https://github.com/julianlam"
-    },
-    {
-      "name": "Barış Soner Uşaklı",
-      "email": "baris@designcreateplay.com",
-      "url": "https://github.com/barisusakli"
+      "name": "Marty",
+      "email": "contacto@exo.do",
+      "url": "https://github.com/exomarty"
     }
   ],
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/psychobunny/nodebb-theme-persona/issues"
+    "url": "https://github.com/exo-do/nodebb-theme-exodus/issues"
   }
 }
