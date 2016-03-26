@@ -2,16 +2,16 @@
 <script type="text/javascript">
 
 jQuery(function ($) {
-	
+
 	'use strict';
-	
+
 	(function () {
 	var $frame  = $('#basic');
-	var $slidee = $frame.children('ul').eq(0);	
+	var $slidee = $frame.children('ul').eq(0);
 	var $wrap   = $frame.parent();
-	
-	
-	
+
+
+
 	var options = {
 	  	horizontal: 1,
 		itemNav: 'basic',
@@ -22,7 +22,7 @@ jQuery(function ($) {
 		releaseSwing: 1,
 		scrollBar: $wrap.find('.scrollbar'),
 		scrollBy: 2,
-		scrollTrap: true, 
+		scrollTrap: true,
 		pagesBar: $wrap.find('.pages'),
 		activatePageOn: 'click',
 		speed: 200,
@@ -30,13 +30,13 @@ jQuery(function ($) {
 		elasticBounds: 1,
 		dragHandle: 1,
 		dynamicHandle: 1,
-		clickBar: 1, 
+		clickBar: 1,
 		keyboardNavBy: 'items',
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
-	
+
   	};
-	
+
 
 	var fn,fn1,fn2;
   	var sly = new Sly('#basic', options, {
@@ -46,23 +46,23 @@ jQuery(function ($) {
 		move: [
 			function () {},
 	        function () {}
-		] 
-    }).init();	
-	
-	}());	
+		]
+    }).init();
+
+	}());
 });
 
 jQuery(function ($) {
-	
+
 	'use strict';
-	
+
 	(function () {
 	var $frame  = $('#basic2');
-	var $slidee = $frame.children('ul').eq(0);	
+	var $slidee = $frame.children('ul').eq(0);
 	var $wrap   = $frame.parent();
-	
-	
-	
+
+
+
 	var options = {
 	  	horizontal: 1,
 		itemNav: 'basic',
@@ -73,7 +73,7 @@ jQuery(function ($) {
 		releaseSwing: 1,
 		scrollBar: $wrap.find('.scrollbar'),
 		scrollBy: 2,
-		scrollTrap: true, 
+		scrollTrap: true,
 		pagesBar: $wrap.find('.pages'),
 		activatePageOn: 'click',
 		speed: 200,
@@ -81,13 +81,13 @@ jQuery(function ($) {
 		elasticBounds: 1,
 		dragHandle: 1,
 		dynamicHandle: 1,
-		clickBar: 1, 
+		clickBar: 1,
 		keyboardNavBy: 'items',
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
-	
+
   	};
-	
+
 
 	var fn,fn1,fn2;
   	var sly = new Sly('#basic2', options, {
@@ -97,10 +97,10 @@ jQuery(function ($) {
 		move: [
 			function () {},
 	        function () {}
-		] 
-    }).init();	
-	
-	}());	
+		]
+    }).init();
+
+	}());
 });
 
 </script>
@@ -115,7 +115,7 @@ jQuery(document).ready(function($){
 	});
 	//close the lateral panel
 	$('.cd-panel').on('click', function(event){
-		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) {
 			$('.cd-panel').removeClass('is-visible');
 		}
 	});
@@ -137,12 +137,12 @@ var plantilla = '/api/recent';
 </script>
 
 <main class="cd-main-content">
-	
+
 <div class="row">
 <div class="topic col-lg-12">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<a href="#" class="cd-btn pull-right"><i class="fa fa-clock-o"></i></a>
-	
+
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
 
 		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
@@ -159,7 +159,7 @@ var plantilla = '/api/recent';
 	<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted -->">[[topic:deleted_message]]</div>
 
 	<hr class="visible-xs" />
-	
+
 	<!-- IF config.usePagination -->
 	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<div class="scrollbar visible-xs">
@@ -169,13 +169,13 @@ var plantilla = '/api/recent';
 	</div>
 	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
 	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-	
+
 	<div id="basic2" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="slidee">
-	
+
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
-	
+
 	<ul component="topic" class="posts" data-tid="{tid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted --><!-- IF posts.ignored --> ignored<!-- ENDIF posts.ignored --><!-- IF posts.isOP --> highlight-op<!-- ENDIF posts.isOP -->" <!-- IMPORT partials/data/topic.tpl -->>
@@ -194,7 +194,7 @@ var plantilla = '/api/recent';
 	<div class="post-bar">
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>
-	
+
 	<!-- IF config.usePagination -->
 	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<div class="scrollbar visible-xs">
@@ -204,7 +204,7 @@ var plantilla = '/api/recent';
 	</div>
 	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
 	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-	
+
 	<div id="basic" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<ul class="slidee">
 	<!-- IMPORT partials/paginator.tpl -->
@@ -230,11 +230,11 @@ var plantilla = '/api/recent';
 </main>
 
 <div class="cd-panel from-right">
-	
- 
+
+
 	<div class="cd-panel-container">
 		<div id="contenido" class="cd-panel-content">
-			
+
 		</div> <!-- cd-panel-content -->
 	</div> <!-- cd-panel-container -->
 </div> <!-- cd-panel -->

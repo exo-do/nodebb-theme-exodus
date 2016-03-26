@@ -3,8 +3,7 @@
 <div class="row register">
 	<div class="{register_window:spansize}">
 		<div class="well well-lg">
-			<div class="alert alert-danger" id="register-error-notify" <!-- IF error -->style="display:block"<!-- ELSE -->style="display: none;"<!-- ENDIF error -->>
-				<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<div class="alert alert-danger<!-- IF !error --> hidden<!-- ENDIF !error -->" id="register-error-notify" >
 				[[error:registration-error]]
 				<p>{error}</p>
 			</div>
@@ -83,7 +82,6 @@
 				<!-- ENDIF termsOfUse -->
 				<div class="form-group">
 					<div class="col-lg-offset-4 col-lg-8">
-						<hr />
 						<button class="btn btn-primary btn-lg btn-block" id="register" type="submit">[[register:register_now_button]]</button>
 					</div>
 				</div>

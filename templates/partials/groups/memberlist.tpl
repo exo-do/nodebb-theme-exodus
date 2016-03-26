@@ -9,9 +9,9 @@
 		<td>
 			<a href="{config.relative_path}/user/{group.members.userslug}">
 				<!-- IF group.members.picture -->
-				<img class="avatar avatar-sm" src="{group.members.picture}" />
+				<img class="avatar avatar-sm avatar-rounded" src="{group.members.picture}" />
 				<!-- ELSE -->
-				<div class="avatar avatar-sm" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
+				<div class="avatar avatar-sm avatar-rounded" style="background-color: {group.members.icon:bgColor};">{group.members.icon:text}</div>
 				<!-- ENDIF group.members.picture -->
 			</a>
 		</td>

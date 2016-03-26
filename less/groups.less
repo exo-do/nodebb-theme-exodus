@@ -75,7 +75,7 @@
 			right: 2em;
 			opacity: 1;
 			background-color: @brand-primary;
-			color: #eee;
+			color: @gray-lighter;
 			padding: 0.5em;
 			font-weight: bold;
 
@@ -93,16 +93,6 @@
 		}
 	}
 
-	[component="groups/members"], [component="groups/pending"], [component="groups/invited"] {
-		img, .user-icon {
-			.user-icon-style(32px, 1.5rem, 50%);
-		}
-
-		.member-name {
-			vertical-align: middle;
-		}
-	}
-
 	[component="groups/members"] {
 		tbody {
 			max-height: 500px;
@@ -115,7 +105,7 @@
 	}
 
 	.owner-controls {
-	 		margin-top: -6px;
+		margin-top: -6px;
 	}
 
 	@media (min-width: @screen-md-min) {
@@ -160,11 +150,6 @@
 			> li {
 				list-style-type: none;
 				display: inline-block;
-
-				img, .user-icon {
-					.user-icon-style(32px, 1.5rem, 50%);
-					line-height: normal; /* see: https://community.nodebb.org/topic/6804/user-icons-testing */
-				}
 			}
 
 			.truncated {

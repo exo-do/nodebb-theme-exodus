@@ -6,7 +6,7 @@
 	<ul class="dropdown-menu pull-right" role="menu">
 		<li><a href="#" component="topic/reply-as-topic">[[topic:reply-as-topic]]</a></li>
 	</ul>
-/div>
+</div>
 <!-- IF loggedIn -->
 <!-- IF !privileges.topics:reply -->
 <!-- IF locked -->

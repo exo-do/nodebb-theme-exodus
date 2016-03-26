@@ -51,23 +51,19 @@
 </li>
 -->
 
-<!-- IF !config.disableSocialButtons -->
-<li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
-<li role="presentation">
-	<a role="menuitem" class="facebook-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-facebook"></i></span> Facebook</a>
-</li>
-<li role="presentation">
-	<a role="menuitem" class="twitter-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-twitter"></i></span> Twitter</a>
-</li>
-<li role="presentation">
-	<a role="menuitem" class="google-share" tabindex="-1" href="#"><span class="menu-icon"><i class="fa fa-google-plus"></i></span> Google+</a>
-</li>
-<!-- ENDIF !config.disableSocialButtons -->
-
+<!-- IF postSharing.length -->
 <li role="presentation" class="divider"></li>
+<li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
+<!-- ENDIF postSharing.length -->
+<!-- BEGIN postSharing -->
+<li role="presentation">
+ 	<a role="menuitem" component="share/{postSharing.id}" tabindex="-1" href="#"><span class="menu-icon"><i class="fa {postSharing.class}"></i></span> {postSharing.name}</a>
+</li>
+<!-- END postSharing -->
 
 <!-- IF config.loggedIn -->
 <!-- IF !posts.selfPost -->
+<li role="presentation" class="divider"></li>
 <li role="presentation">
 	<a component="post/flag" role="menuitem" tabindex="-1" href="#">
 		[[topic:flag_title]]

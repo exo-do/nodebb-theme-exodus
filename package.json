@@ -5,7 +5,7 @@
     "id": "nodebb-theme-exodus",
     "name": "Theme Exodus",
     "type": "theme",
-    "compatibility": "^0.8.2 || ^0.9.0"
+    "compatibility": "^0.8.2 || ^0.9.0 || ^1.0.0"
   },
   "description": "Persona theme for NodeBB by Exodo",
   "main": "theme.less",
