@@ -2,16 +2,16 @@
 <script type="text/javascript">
 
 jQuery(function ($) {
-	
+
 	'use strict';
-	
+
 	(function () {
 	var $frame  = $('#basic');
-	var $slidee = $frame.children('ul').eq(0);	
+	var $slidee = $frame.children('ul').eq(0);
 	var $wrap   = $frame.parent();
-	
-	
-	
+
+
+
 	var options = {
 	  	horizontal: 1,
 		itemNav: 'basic',
@@ -22,7 +22,7 @@ jQuery(function ($) {
 		releaseSwing: 1,
 		scrollBar: $wrap.find('.scrollbar'),
 		scrollBy: 2,
-		scrollTrap: true, 
+		scrollTrap: true,
 		pagesBar: $wrap.find('.pages'),
 		activatePageOn: 'click',
 		speed: 200,
@@ -30,13 +30,13 @@ jQuery(function ($) {
 		elasticBounds: 1,
 		dragHandle: 1,
 		dynamicHandle: 1,
-		clickBar: 1, 
+		clickBar: 1,
 		keyboardNavBy: 'items',
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
-	
+
   	};
-	
+
 
 	var fn,fn1,fn2;
   	var sly = new Sly('#basic', options, {
@@ -46,10 +46,10 @@ jQuery(function ($) {
 		move: [
 			function () {},
 	        function () {}
-		] 
-    }).init();	
-	
-	}());	
+		]
+    }).init();
+
+	}());
 });
 </script>
 <!-- ENDIF config.usePagination -->
@@ -221,7 +221,7 @@ jQuery(function ($) {
 								<div class="user-icon user-img" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 								<!-- ENDIF posts.user.picture -->
 							</a>
-							[[global:posted_in_ago, <a href="{config.relative_path}/category/{posts.category.slug}"><i class="fa {posts.category.icon}"></i> {posts.category.name}</a>, <span class="timeago" title="{posts.relativeTime}"></span>]]
+							<a href="{config.relative_path}/category/{posts.category.slug}">[[global:posted_in, {posts.category.name}]] <i class="fa {posts.category.icon}"></i> <span class="timeago" title="{posts.relativeTime}"></span></a>
 						</span>
 					</small>
 				</div>
@@ -247,10 +247,10 @@ jQuery(function ($) {
 			</div>
 			<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
 			<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-	
+
 			<div id="basic" class="frame text-center pagination-container">
 			<ul class="slidee">
-	
+
 			<!-- IMPORT partials/paginator.tpl -->
 			<!-- ENDIF config.usePagination -->
 		</div>

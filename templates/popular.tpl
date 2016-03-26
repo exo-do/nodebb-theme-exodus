@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
 	});
 	//clode the lateral panel
 	$('.cd-panel').on('click', function(event){
-		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) { 
+		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') ) {
 			$('.cd-panel').removeClass('is-visible');
 			event.preventDefault();
 		}
@@ -29,11 +29,11 @@ jQuery(document).ready(function($){
 </script>
 
 <main class="cd-main-content">
-	
+
 <div class="popular">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 	<a href="#0" class="cd-btn pull-right">Fire Panel</a>
-	<ul class="nav nav-pills">
+	<ul class="nav nav-pills" component="popular/tab">
 		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>
 		<li><a href='{config.relative_path}/popular/weekly'>[[recent:week]]</a></li>
 		<li><a href='{config.relative_path}/popular/monthly'>[[recent:month]]</a></li>
@@ -53,11 +53,11 @@ jQuery(document).ready(function($){
 </main>
 
 <div class="cd-panel from-right">
-	
- 
+
+
 	<div class="cd-panel-container">
 		<div id="contenido" class="cd-panel-content">
-			
+
 		</div> <!-- cd-panel-content -->
 	</div> <!-- cd-panel-container -->
 </div> <!-- cd-panel -->

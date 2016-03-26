@@ -38,7 +38,7 @@
 <!-- ENDIF posts.display_move_tools -->
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
-
+<!-- IF !posts.deleted -->
 <!--<li role="presentation">
 	<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}">
 
@@ -66,6 +66,7 @@
 
 <li role="presentation" class="divider"></li>
 
+<!-- IF config.loggedIn -->
 <!-- IF !posts.selfPost -->
 <li role="presentation">
 	<a component="post/flag" role="menuitem" tabindex="-1" href="#">
@@ -73,3 +74,5 @@
 	</a>
 </li>
 <!-- ENDIF !posts.selfPost -->
+<!-- ENDIF config.loggedIn -->
+<!-- ENDIF !posts.deleted -->

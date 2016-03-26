@@ -5,14 +5,14 @@
 				<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
 			</strong>
 			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
-			
+
 		</div>
 
-		
+
 		<span class="index"><strong>{posts.index}</strong></span>
 	</div>
 	<div class="post-details">
-	
+
 		<div class="icon pull-left hidden-xs">
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 				<!-- IF posts.user.picture -->
@@ -20,12 +20,12 @@
 				<!-- ELSE -->
 				<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 				<!-- ENDIF posts.user.picture -->
-			
+
 			</a>
 		</div>
 
 		<div class="userinfo-extra hidden-xs">
-		
+
 			<!-- IF posts.user.custom_profile_info.length -->
 			<!-- BEGIN custom_profile_info -->
 			<!-- IF posts.user.custom_profile_info.joindate -->
@@ -39,7 +39,7 @@
 
 			<i class='fa fa-star'></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.uid}" class='formatted-number reputation'>{posts.user.reputation}</span>&nbsp;|&nbsp;
 			<i class='fa fa-pencil'></i> <span class='formatted-number' component="user/postcount" data-uid="{posts.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
-		
+
 			<div class="hidden">
 				<!-- IMPORT partials/topic/badge.tpl -->
 			</div>
@@ -48,17 +48,17 @@
 			<!-- ENDIF posts.user.banned -->
 		</div>
 	</div>
-	
+
 	<!--
 	<small class="pull-left">
-		
-	
-	
+
+
+
 		<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-			
 
 
-			
+
+
 
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
@@ -71,27 +71,28 @@
 		</div>
 
 	</small>
-	
+
 	-->
 	<div class="content" component="post/content" itemprop="text">
 		<!-- IF posts.toPid -->
 		<button component="post/parent" class="btn btn-xs btn-default btn-parent" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @{posts.parent.username}</button>
 		<!-- ENDIF posts.toPid -->
 		{posts.content}
-		
+
 	</div>
 	<div class="time">
 		<p><a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.relativeTime}"></span></a>
 
 		<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
 
-		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by_ago, <strong>{posts.editor.username}</strong>, <span class="timeago" title="{posts.relativeEditTime}"></span>]]</small></p>
+		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.relativeEditTime}"></span></small>
+  	</p>
 	</div>
-	
+
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature hidden-xs">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
-	
+
 </div>
 
 
@@ -101,7 +102,7 @@
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>&nbsp;&nbsp;[[topic:reply]]</a>
 			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-quote-left"></i>&nbsp;&nbsp;[[topic:quote]]</a>
-			
+
 			<a component="post/favourite" href="#"  class="no-select" data-favourited="{posts.favourited}">
 
 				<i component="post/favourite/on" class="fa fa-heart <!-- IF !posts.favourited -->hidden<!-- ENDIF !posts.favourited -->"></i>
@@ -124,10 +125,10 @@
 				<i class="fa fa-chevron-down"></i>
 			</a>
 			<!-- ENDIF !downvote:disabled -->
-			
+
 		</span>
 		<!-- ENDIF !reputation:disabled -->
-		
+
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>

@@ -23,7 +23,6 @@
 						<option value="none">None</option>
 						<!-- BEGIN homePageRoutes -->
 						<option value="{homePageRoutes.route}" <!-- IF homePageRoutes.selected -->selected="1"<!-- ENDIF homePageRoutes.selected -->>{homePageRoutes.name}</option>
-
 						<!-- END homePageRoutes -->
 					</select>
 					<p class="help-block">[[user:homepage_description]]</p>
@@ -156,6 +155,26 @@
 					<!-- END languages -->
 				</select>
 			</div>
+
+			<h4>[[global:sessions]]</h4>
+			<ul class="list-group" component="user/sessions">
+				<!-- BEGIN sessions -->
+				<li class="list-group-item" data-uuid="{../uuid}">
+					<div class="pull-right">
+						<!-- IF !../current -->
+						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
+						<!-- ENDIF !../current -->
+						{function.userAgentIcons}
+						<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
+					</div>
+					{../browser} {../version} on {../platform}<br />
+					<small class="timeago text-muted" title="{../datetimeISO}"></small>
+					<ul>
+						<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
+					</ul>
+				</li>
+				<!-- END sessions -->
+			</ul>
 
 
 			<!-- BEGIN customSettings -->
