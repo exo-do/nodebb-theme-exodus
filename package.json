@@ -31,5 +31,11 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/exo-do/nodebb-theme-exodus/issues"
+  },
+  "scripts": {
+    "2npm": "publish"
+  },
+  "devDependencies": {
+    "publish": "0.5.0"
   }
 }
