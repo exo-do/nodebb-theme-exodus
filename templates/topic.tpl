@@ -181,8 +181,8 @@ var plantilla = '/api/recent';
 			<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted --><!-- IF posts.ignored --> ignored<!-- ENDIF posts.ignored --><!-- IF posts.isOP --> highlight-op<!-- ENDIF posts.isOP -->" <!-- IMPORT partials/data/topic.tpl -->>
 				<a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
 
-				<meta itemprop="datePublished" content="{posts.relativeTime}">
-				<meta itemprop="dateModified" content="{posts.relativeEditTime}">
+				<meta itemprop="datePublished" content="{posts.timestampISO}">
+				<meta itemprop="dateModified" content="{posts.editedISO}">
 
 				<!-- IMPORT partials/topic/post.tpl -->
 			</li>

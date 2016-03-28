@@ -49,12 +49,12 @@
 				</span>
 				-->
 				<small> {topics.user.username} </small>
-				<small class="hidden-xs"><span class="timeago" title="{topics.relativeTime}"></span></small>
+				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span></small>
 				<small class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
-					<span class="timeago" title="{topics.teaser.timestamp}"></span>
+					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					<!-- ELSE -->
-					<span class="timeago" title="{topics.relativeTime}"></span>
+					<span class="timeago" title="{topics.timestampISO}"></span>
 					<!-- ENDIF topics.teaser.timestamp -->
 				</small>
 			</h2>
@@ -93,7 +93,7 @@
 						-->
 					</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<span class="timeago" title="{topics.teaser.timestamp}"></span>
+						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
 				</p>
 				<div class="post-content">
