@@ -236,17 +236,16 @@ background-color: #fff; //cambiar blanco a variable
 .topic .time {
 	padding: 5px 15px 5px 5px;
 	text-align: right;
+	background-color: @topic-content;
 	border-right: 1px solid @topic-border;
 	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
 	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
-	
-	background-color: @topic-content;
-	
 }
 .topic .post-signature {
-	margin-left: 128px;
+	display: block;
 	background-color: @topic-content;
 	border-right: 1px solid @topic-border;
+	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
 	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
 	padding-left: 5px;
 	padding-right: 5px;
@@ -294,6 +293,12 @@ background-color: #fff; //cambiar blanco a variable
 	margin-top: 0px;
 	margin-bottom: 0px;
 	border-top: 3px solid transparent;
+}
+
+.topic {
+	&.deleted {
+		.opacity(0.3);
+	}
 }
 
 /* -------------------------------------- PAGINACION ----------------------------------------*/

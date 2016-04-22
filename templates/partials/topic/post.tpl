@@ -29,18 +29,14 @@
 			<!-- IF posts.user.custom_profile_info.length -->
 			<!-- BEGIN custom_profile_info -->
 			<!-- IF posts.user.custom_profile_info.joindate -->
-			<span>{posts.user.custom_profile_info.joindate}</span></br>
+			</br></br><span>{posts.user.custom_profile_info.joindate}</span></br>
 			<!-- ENDIF posts.user.custom_profile_info.joindate -->
-			<!-- IF posts.user.custom_profile_info.location -->
-			<!--<dt></dt> <dd>{posts.user.custom_profile_info.location}</dd>-->
-			<!-- ENDIF posts.user.custom_profile_info.location -->
 			<!-- END custom_profile_info -->
 			<!-- ENDIF posts.user.custom_profile_info.length -->
-
 			<i class='fa fa-star'></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.uid}" class='formatted-number reputation'>{posts.user.reputation}</span>&nbsp;|&nbsp;
 			<i class='fa fa-pencil'></i> <span class='formatted-number' component="user/postcount" data-uid="{posts.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
 
-			<div class="hidden">
+			<div class="badge-label"></br>
 				<!-- IMPORT partials/topic/badge.tpl -->
 			</div>
 			<!-- IF posts.user.banned -->
@@ -49,30 +45,6 @@
 		</div>
 	</div>
 
-	<!--
-	<small class="pull-left">
-
-
-
-		<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
-
-
-
-
-
-			<span>
-				<!-- IF posts.user.custom_profile_info.length -->
-				&#124;
-				<!-- BEGIN custom_profile_info -->
-				{posts.user.custom_profile_info.content}
-				<!-- END custom_profile_info -->
-				<!-- ENDIF posts.user.custom_profile_info.length -->
-			</span>
-		</div>
-
-	</small>
-
-	-->
 	<div class="content" component="post/content" itemprop="text">
 		<!-- IF posts.toPid -->
 		<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></button>
@@ -80,14 +52,16 @@
 
 		{posts.content}
 
+		
 	</div>
 	<div class="time">
-		<p><a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.timestampISO}"></span></a>
-
-		<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
-
-		<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.relativeEditTime}"></span></small>
-  	</p>
+		<p>
+			<a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.timestampISO}"></span></a>
+			<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
+			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">
+				[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.relativeEditTime}"></span>
+			</small>
+  		</p>
 	</div>
 
 	<!-- IF posts.user.signature -->
