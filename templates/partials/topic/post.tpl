@@ -36,7 +36,7 @@
 			<i class='fa fa-star'></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.uid}" class='formatted-number reputation'>{posts.user.reputation}</span>&nbsp;|&nbsp;
 			<i class='fa fa-pencil'></i> <span class='formatted-number' component="user/postcount" data-uid="{posts.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
 
-			<div class="badge-label"></br>
+			<div class="group-badge"></br>
 				<!-- IMPORT partials/topic/badge.tpl -->
 			</div>
 			<!-- IF posts.user.banned -->
@@ -48,7 +48,7 @@
 	<div class="content" component="post/content" itemprop="text">
 		<!-- IF posts.toPid -->
 		<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></button>
-  	<!-- ENDIF posts.toPid -->
+  		<!-- ENDIF posts.toPid -->
 
 		{posts.content}
 

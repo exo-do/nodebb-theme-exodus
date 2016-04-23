@@ -259,6 +259,7 @@ background-color: #fff; //cambiar blanco a variable
 	background-color: @topic-details !important;
 	display: block;
 	line-height: 30px;
+	min-height: 30px;
 	width: 100% !important;
 	text-align: right;
 	background-image: @pattern;
@@ -295,11 +296,18 @@ background-color: #fff; //cambiar blanco a variable
 	border-top: 3px solid transparent;
 }
 
-.topic {
-	&.deleted {
-		.opacity(0.3);
+//deleted posts
+.topic .posts >li.deleted .box {
+	
+	opacity: 0.5;
+	.content {
+		background-color: @topic-details;
 	}
+	.time { display: none; }
+	.post-signature { display: none; }
+	.group-badge { display: none; }
 }
+
 
 /* -------------------------------------- PAGINACION ----------------------------------------*/
 //paginacion nueva de exodo
