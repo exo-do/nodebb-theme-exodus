@@ -1,5 +1,6 @@
 <div class="btn-group action-bar <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">
-	<button class="btn btn-primary" component="topic/reply">[[topic:reply]]</button>
+	<button class="btn btn-primary" component="topic/reply"><span class="visible-sm-inline visible-md-inline 
+visible-lg-inline">[[topic:reply]]</span><i class="fa fa-reply"></i></button>
 	<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 		<span class="caret"></span>
 	</button>

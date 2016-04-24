@@ -38,8 +38,9 @@
 <!-- ENDIF posts.display_move_tools -->
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
+<!--
 <!-- IF !posts.deleted -->
-<!--<li role="presentation">
+<li role="presentation">
 	<a component="post/favourite" role="menuitem" tabindex="-1" href="#" data-favourited="{posts.favourited}">
 
 		<span class="favourite-text">[[topic:favourite]]</span>
@@ -52,7 +53,6 @@
 -->
 
 <!-- IF postSharing.length -->
-<li role="presentation" class="divider"></li>
 <li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
 <!-- ENDIF postSharing.length -->
 <!-- BEGIN postSharing -->
