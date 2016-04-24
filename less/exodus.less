@@ -109,12 +109,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 		//box-shadow: 0 0 0 2px #e4e4e4;
 		text-decoration: none;
 		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-		.fa {
-      	  //	-webkit-transform: scale(1.2);
-      		//-moz-transform: scale(1.2);
-      	  	//-ms-transform: scale(1.2);
-      	  	//-o-transform: scale(1.2);
-      	}
 	}
   
 }
@@ -235,22 +229,19 @@ background-color: #fff; //cambiar blanco a variable
 .topic .time {
 	padding: 5px 15px 5px 5px;
 	text-align: right;
-	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 0px;}
-	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
 }
 .topic .post-signature {
 	display: block;
 	max-height: 40px;
 	overflow: hidden;
-	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 0px;}
-	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
 	padding-left: 5px;
 	padding-right: 5px;
 }
 .topic .sub-content {
 	background-color: @topic-content;
 	min-height: 70px;
-	margin-left: 128px;
+	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
+	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
 	border-right: 1px solid @topic-border;
 }
 .topic .box {
