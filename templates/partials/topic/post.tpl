@@ -54,6 +54,7 @@
 
 		
 	</div>
+	<div class="sub-content">
 	<div class="time">
 		<p>
 			<a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.timestampISO}"></span></a>
@@ -63,16 +64,17 @@
 			</small>
   		</p>
 	</div>
-
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature hidden-xs">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
-
+	</div>
+	
 </div>
 
 
 
 <div class="links-bar">
+	
 	<small>
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>&nbsp;&nbsp;[[topic:reply]]</a>
