@@ -210,6 +210,14 @@ var plantilla = '/api/recent';
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 
+	<div class="tags pull-left">
+	<!-- BEGIN tags -->
+	<a href="{config.relative_path}/tags/{tags.value}">
+		<span class="tag-item" data-tag="{tags.value}" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">{tags.value}</span>
+		<span class="tag-topic-count human-readable-number" title="{tags.score}">{tags.score}</span></a>
+	<!-- END tags -->
+	</div>
+	
 	<div class="visible-xs visible-sm pagination-block text-center">
 		<div class="progress-bar"></div>
 		<div class="wrapper">
