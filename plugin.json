@@ -12,16 +12,12 @@
 				"hook": "action:post.save", "method": "posteando"
 			}
 	],
-	"staticDirs": {
-			"static": "./static"
-		},
 	"scripts": [
 		"lib/persona.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout-notouch.min.js",
 		"lib/client/chats.js",
-		"lib/sly.min.js",
-		"static/lib/sly.js"
+		"lib/sly.min.js"
 	]
 }

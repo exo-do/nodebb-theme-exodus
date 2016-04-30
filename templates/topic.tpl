@@ -38,7 +38,6 @@ jQuery(function ($) {
   	};
 
 
-	var fn,fn1,fn2;
   	var sly = new Sly('#basic', options, {
     	load: function () {
     		this.activate(this.getIndex($wrap.find('.active')));
@@ -89,7 +88,6 @@ jQuery(function ($) {
   	};
 
 
-	var fn,fn1,fn2;
   	var sly = new Sly('#basic2', options, {
     	load: function () {
     		this.activate(this.getIndex($wrap.find('.active')));
@@ -217,7 +215,7 @@ var plantilla = '/api/recent';
 		<span class="tag-topic-count human-readable-number" title="{tags.score}">{tags.score}</span></a>
 	<!-- END tags -->
 	</div>
-	
+
 	<div class="visible-xs visible-sm pagination-block text-center">
 		<div class="progress-bar"></div>
 		<div class="wrapper">
