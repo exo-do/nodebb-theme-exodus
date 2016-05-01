@@ -2,16 +2,16 @@
 <script type="text/javascript">
 
 jQuery(function ($) {
-	
+
 	'use strict';
-	
+
 	(function () {
 	var $frame  = $('#basic');
-	var $slidee = $frame.children('ul').eq(0);	
+	var $slidee = $frame.children('ul').eq(0);
 	var $wrap   = $frame.parent();
-	
-	
-	
+
+
+
 	var options = {
 	  	horizontal: 1,
 		itemNav: 'basic',
@@ -22,7 +22,7 @@ jQuery(function ($) {
 		releaseSwing: 1,
 		scrollBar: $wrap.find('.scrollbar'),
 		scrollBy: 2,
-		scrollTrap: true, 
+		scrollTrap: true,
 		pagesBar: $wrap.find('.pages'),
 		activatePageOn: 'click',
 		speed: 200,
@@ -31,12 +31,11 @@ jQuery(function ($) {
 		dragHandle: 1,
 		dynamicHandle: 1,
 		clickBar: 1, 
-		keyboardNavBy: 'items',
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
-	
+
   	};
-	
+
 
 	var fn,fn1,fn2;
   	var sly = new Sly('#basic', options, {
@@ -46,10 +45,10 @@ jQuery(function ($) {
 		move: [
 			function () {},
 	        function () {}
-		] 
-    }).init();	
-	
-	}());	
+		]
+    }).init();
+
+	}());
 });
 </script>
 <!-- ENDIF config.usePagination -->
@@ -88,7 +87,7 @@ jQuery(function ($) {
 
 	<!-- IMPORT partials/topics_list.tpl -->
 
-	
+
 	<!-- IF config.usePagination -->
 	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
 	<div class="scrollbar visible-xs">
@@ -98,14 +97,14 @@ jQuery(function ($) {
 	</div>
 	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
 	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-	
+
 	<div id="basic" class="frame text-center pagination-container">
 	<ul class="slidee">
-	
+
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
-	
-	
+
+
 </div>
 
 <!-- IMPORT partials/move_thread_modal.tpl -->
@@ -115,4 +114,3 @@ jQuery(function ($) {
 	<!-- IMPORT partials/paginator.tpl -->
 </noscript>
 <!-- ENDIF !config.usePagination -->
-

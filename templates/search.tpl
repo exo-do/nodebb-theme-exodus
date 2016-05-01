@@ -31,7 +31,6 @@ jQuery(function ($) {
 		dragHandle: 1,
 		dynamicHandle: 1,
 		clickBar: 1,
-		keyboardNavBy: 'items',
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
 
