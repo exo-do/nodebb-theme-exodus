@@ -30,7 +30,7 @@ jQuery(function ($) {
 		elasticBounds: 1,
 		dragHandle: 1,
 		dynamicHandle: 1,
-		clickBar: 1, 
+		clickBar: 1,
 		prevPage: $wrap.find('.prevPage'),
 		nextPage: $wrap.find('.nextPage')
 
@@ -98,7 +98,7 @@ jQuery(function ($) {
 	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
 	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
 
-	<div id="basic" class="frame text-center pagination-container">
+	<div id="basic" component="pagination" class="frame text-center pagination-container">
 	<ul class="slidee">
 
 	<!-- IMPORT partials/paginator.tpl -->

@@ -27,7 +27,7 @@
 
 			<!-- BEGIN pages -->
 			<!-- IF pagination.pages.separator -->
-			<li class="page select-page">
+			<li component="pagination/select-page" class="page select-page">
 				<a href="#" style="display:block;"><i class="fa fa-ellipsis-h"></i></a>
 			</li>
 			<!-- ELSE -->
