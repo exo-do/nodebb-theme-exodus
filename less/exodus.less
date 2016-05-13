@@ -2,14 +2,35 @@
 
 /* -------------------------------------- HEADER ----------------------------------------*/
 
-// navbar colors 
+//main margin
+
+@media (min-width: @screen-xs-max){
+	.navbar > div{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#content  {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: @screen-xs-max){
+	.container-fluid {
+		padding-left: 5px;
+  	padding-right: 5px;
+	}
+}
+
+// navbar colors
 .header {
 	background-color: @navbar-bg;
 }
+
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav .btn-link, .navbar-default  .pagination-block i {
 	color: @navbar-icon;
 }
-		
+
 .navbar-default	.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default	.navbar-nav .btn-link:hover ,
  .pagination-block i.fa:hover, .pagination-block i.fa:focus{
 	color: @navbar-hover;
@@ -18,7 +39,7 @@
 	background-color: @navbar-icon;
 }
 
-// mobile toogle 
+// mobile toogle
 .navbar-default .navbar-toggle {
 	border: inherit;
 }
@@ -29,23 +50,22 @@
 	}
 }
 
-// logo 
+// logo by exodo
 .header .forum-logo {
-	margin-top: 10px;
-	width: 95px;
-	height: 30px;
+	margin-top: 15px;
+	width: 107px;
+	height: 20px;
 	margin-left: -6px;
 	@media (max-width: @screen-xs-max){
-		margin-left: 10px;
+			margin-left: 15px;
 	}
-	margin-right: 5px;
 }
 
 /* -------------------------------------- STYLE ----------------------------------------*/
 
 
 body {
-	background: @bg-color; 	
+	background: @bg-color;
 	font-family: @exodo-font-family;
 	font-size: 13px;
 }
@@ -60,9 +80,12 @@ a:hover, a:focus {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: bold;
 }
+
+
 //botones
 
-@color-fondo: #2e3539;
+//@color-fondo: #2e3539;
+@color-fondo: @topic-header;
 @color-linea: #cf246a;
 @speed: 0.20s;
 @transition: all @speed ease;
@@ -70,47 +93,48 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 //exodus button
 .btn-default, .btn-primary, .btn-warning, .btn-danger, .btn-info {
-	
+
 	width: auto;
 	height: 27px;
 	line-height: 27px !important;
 	margin: auto;
 	color: #fff;
 	padding: 0 5px 0 5px !important;
-  	cursor: pointer;
+  cursor: pointer;
 	overflow: hidden;
 	border-radius: 0px;
 	font-size: 13px !important;
 	vertical-align: middle;
 	background-color: @color-fondo !important;
-  	border-left: 5px solid @color-linea !important;
-  	border-top: 0 !important;
-  	border-bottom: 0 !important;
-  	border-right: 0 !important;
-  
-  	span, a {
+  border-left: 5px solid @color-linea !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-right: 0 !important;
+
+  span, a {
 		color: inherit;
 		line-height: inherit;
 		//vertical-align:inherit;
-	    font-size: 13px;
+	  font-size: 13px;
 	}
-	
-  	.fa {
-    	line-height: inherit;
-	    vertical-align:inherit;
-	    min-width: 25px;
-	    font-size: 16px;
+
+  .fa {
+    line-height: inherit;
+	  vertical-align:inherit;
+	  min-width: 25px;
+	  font-size: 16px;
 		margin-top: -3px;
   }
- 
-  	&:hover , &:focus{
+
+  &:hover , &:focus{
 		z-index: auto !important;
 		color: #fff !important;
 		//box-shadow: 0 0 0 2px #e4e4e4;
 		text-decoration: none;
-		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14);
+		//color: lighten (#fff ,50%);
 	}
-  
+
 }
 
 //boostrap want to keep button text on black
@@ -204,7 +228,7 @@ background-color: #fff; //cambiar blanco a variable
 	    font-size: 13px;
 	}
   	&:hover , &:focus{
-		
+
 		color: black !important;
 		box-shadow: 0 0 0 2px #e4e4e4;
 		text-decoration: none;
@@ -275,14 +299,14 @@ background-color: #fff; //cambiar blanco a variable
 }
 .topic .votes {
 	padding-right: 5px;
-	
+
 	a {
 		padding: 3px;
 	}
 }
 
 .topic .links-bar {
-	border-bottom: 1px solid @topic-border; 
+	border-bottom: 1px solid @topic-border;
 }
 
 //bookmark HR easeinout
@@ -294,7 +318,7 @@ background-color: #fff; //cambiar blanco a variable
 
 //deleted posts
 .topic .posts >li.deleted .box {
-	
+
 	opacity: 0.5;
 	.content {
 		background-color: @topic-details;
@@ -313,7 +337,7 @@ background-color: #fff; //cambiar blanco a variable
 //.example button:hover, .example button:hover { opacity: 1; }
 //.example button:disabled, .example button:disabled { opacity: .2; }
 
-.example .forward, .example .backward { float: left; 
+.example .forward, .example .backward { float: left;
 
 	//width: 5%;
 	height: 25px;
@@ -321,7 +345,7 @@ background-color: #fff; //cambiar blanco a variable
 	font-size: 20px;
 	padding: 2px 0px 3px 0px;
  }
-.example .forward { float: right; 
+.example .forward { float: right;
 }
 
 .example .frame { margin: 0 auto; width: 85%; height: 25px; line-height: 50px; overflow: hidden; text-shadow: none; }
@@ -356,36 +380,36 @@ background-color: #fff; //cambiar blanco a variable
 	.topic-list {
 		margin-top: 0px;
 	}
-	
+
 	> ul {
-		
+
 		> li {
-			padding-top: 0px; 
+			padding-top: 0px;
 			padding-bottom: 0px;
-			min-height: 52px; 
+			min-height: 52px;
 			border-top: 1px solid #ddd  !important;
 			border-left: 1px solid #ddd ;
 			border-right: 1px solid #ddd ;
 			list-style: none;
 			background-color: #f0f0f0; //cambiar
-			
+
 			.teaser {
 				//width: 30%;
 				.card {
 					height: 45px;
 					padding-top: 3px;
-				
+
 					.post-content {
 						font-size:11px;
 					}
 				}
 			}
-			
+
 			.content {
-			
+
 				padding-left: 15px;
 				padding-right: 10px;
-				
+
 				h2 {
 					margin-left: 55px;
 					line-height: 15px;
@@ -395,10 +419,10 @@ background-color: #fff; //cambiar blanco a variable
 						font-size: 13px;
 					}
 				}
-				
+
 				.avatar {
 				padding-top: 5px;
-				
+
 				.user-icon,.user-img {
 					width: 40px;
 					height: 40px;
@@ -406,7 +430,7 @@ background-color: #fff; //cambiar blanco a variable
 					margin-right: 0px;
 					}
 				}
-				
+
 				.icon {
 					min-width: 40px;
 					min-height: 40px;
@@ -416,10 +440,10 @@ background-color: #fff; //cambiar blanco a variable
 			&:last-child {
 				border-bottom: 1px solid #ddd !important;
 			}
-		}		
+		}
 	}
-	
-	
+
+
 	.category-bar {
 		background: @topic-header;
 		display: block;
@@ -427,7 +451,7 @@ background-color: #fff; //cambiar blanco a variable
 		width: auto;
 		margin-left: -15px;
 		margin-right: -15px;
-		
+
 		p {
 			color: #fff; //cambiar
 			margin: 0;
@@ -435,7 +459,7 @@ background-color: #fff; //cambiar blanco a variable
 			font-size: 15px;
 		}
 	}
-	
+
 
 	.stats {
 		line-height: 15px;
@@ -449,41 +473,41 @@ background-color: #fff; //cambiar blanco a variable
 			font-size: 12px;
 		}
 	}
-	
-}			
+
+}
 
 
 /* -------------------------------------- CATEGORIES ----------------------------------------*/
 
 .categories {
-	
+
 	> li {
-		padding-top: 0px; 
+		padding-top: 0px;
 		padding-bottom: 0px;
-		min-height: 52px; 
+		min-height: 52px;
 		border-top: 1px solid #ddd  !important;
 		border-left: 1px solid #ddd ;
 		border-right: 1px solid #ddd ;
 		list-style: none;
 		background-color: #f0f0f0; //cambiar
-		
+
 		.teaser {
 			//width: 30%;
 			.card {
 				height: 45px;
 				padding-top: 3px;
-			
+
 				.post-content {
 					font-size:11px;
 				}
 			}
 		}
-		
+
 		.content {
-		
+
 			padding-left: 15px;
 			padding-right: 10px;
-			
+
 			h2 {
 				margin-left: 55px;
 				line-height: 15px;
@@ -493,10 +517,10 @@ background-color: #fff; //cambiar blanco a variable
 					font-size: 13px;
 				}
 			}
-			
+
 			.avatar {
 			padding-top: 5px;
-			
+
 			.user-icon,.user-img {
 				width: 40px;
 				height: 40px;
@@ -504,7 +528,7 @@ background-color: #fff; //cambiar blanco a variable
 				margin-right: 0px;
 				}
 			}
-			
+
 			.icon {
 				min-width: 40px;
 				min-height: 40px;
@@ -514,11 +538,11 @@ background-color: #fff; //cambiar blanco a variable
 		&:last-child {
 			border-bottom: 1px solid #ddd !important;
 		}
-		
+
 	}
-		
-	
-	
+
+
+
 
 	.stats {
 		line-height: 15px;
@@ -532,7 +556,7 @@ background-color: #fff; //cambiar blanco a variable
 			font-size: 12px;
 		}
 	}
-	
+
 }
 
 .subcategory .categories li {
@@ -545,7 +569,7 @@ background-color: #fff; //cambiar blanco a variable
 	width: auto;
 	margin-left: -15px;
 	margin-right: -15px;
-	
+
 	p {
 		color: #fff; //cambiar
 		margin: 0;
@@ -575,7 +599,7 @@ background-color: #fff; //cambiar blanco a variable
 
 
 .cd-btn {
-	
+
 	position: fixed;
 	right: 0;
 	bottom: 0;
@@ -611,7 +635,7 @@ background-color: #fff; //cambiar blanco a variable
 	display: block;
 	line-height: 30px;
 	width: 100%;
-	
+
 	p {
 		color: #fff; //cambiar
 		margin: 0;
@@ -879,5 +903,3 @@ background-color: #fff; //cambiar blanco a variable
     line-height: 1.6;
   }
 }
-
-

@@ -81,9 +81,9 @@
 
 	<main id="panel">
 		<nav class="navbar navbar-default navbar-fixed-top header" id="header-menu" component="navbar">
-			<div class="container">
+			<div class="container-fluid">
 				<!-- IMPORT partials/menu.tpl -->
 			</div>
 		</nav>
-		<div class="container" id="content">
+		<div class="container-fluid" id="content">
 		<!-- IMPORT partials/noscript/warning.tpl -->
