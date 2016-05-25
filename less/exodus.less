@@ -2,9 +2,8 @@
 
 /* -------------------------------------- HEADER ----------------------------------------*/
 
-//main margin
-
-@media (min-width: @screen-xs-max){
+//main margin and padding
+@media (min-width: @screen-xs-max){ // no mobile
 	.navbar > div{
 		margin-left: 20px;
 		margin-right: 20px;
@@ -12,10 +11,11 @@
 	#content  {
 		margin-left: 20px;
 		margin-right: 20px;
+		padding-top: 30px;
 	}
 }
 
-@media (max-width: @screen-xs-max){
+@media (max-width: @screen-xs-max){ //mobile
 
 	.container-fluid {
     padding-left: 0px;
@@ -400,7 +400,7 @@ background-color: #fff; //cambiar blanco a variable
 			border-left: 1px solid #ddd ;
 			border-right: 1px solid #ddd ;
 			list-style: none;
-			background-color: #f0f0f0; //cambiar
+			background-color: #fafafa; //cambiar
 
 			.teaser {
 				//width: 30%;
@@ -498,7 +498,7 @@ background-color: #fff; //cambiar blanco a variable
 		border-left: 1px solid #ddd ;
 		border-right: 1px solid #ddd ;
 		list-style: none;
-		background-color: #f0f0f0; //cambiar
+		background-color: #fafafa; //cambiar
 
 		.teaser {
 			//width: 30%;
@@ -552,7 +552,6 @@ background-color: #fff; //cambiar blanco a variable
 
 
 
-
 	.stats {
 		line-height: 15px;
 		padding-top: 5px;
@@ -601,7 +600,6 @@ background-color: #fff; //cambiar blanco a variable
     border-top-color: @primary;
     border-left-color: @primary;
 }
-
 
 
 /* -------------------------------------- SLIDEOUT ----------------------------------------*/
