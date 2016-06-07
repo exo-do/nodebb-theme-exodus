@@ -208,6 +208,7 @@ background-color: #fff; //cambiar blanco a variable
 	width: 128px;
 	margin-top: 0px;
 	margin-right: 0px;
+	background: #fff;
 }
 
 .topic .posts .post-header{
@@ -284,8 +285,9 @@ background-color: #fff; //cambiar blanco a variable
 	background-image: @pattern;
 }
 
-.topic .links-bar small{
-	background-color: @topic-details !important;
+.topic .posts .links-bar small{
+
+	background-color: @topic-details;
 	display: block;
 	line-height: 30px;
 	min-height: 30px;
@@ -294,9 +296,13 @@ background-color: #fff; //cambiar blanco a variable
 	background-image: @pattern;
 }
 
-.topic .links-bar a {
+.topic .posts .links-bar a {
 	color: @topic-links;
 	font-size: 12px;
+}
+
+.topic .post .links-bar {
+	border-bottom: 1px solid @topic-border;
 }
 
 .topic .index {
@@ -314,9 +320,6 @@ background-color: #fff; //cambiar blanco a variable
 	}
 }
 
-.topic .links-bar {
-	border-bottom: 1px solid @topic-border;
-}
 
 //bookmark HR easeinout
 .topic hr {
@@ -328,9 +331,14 @@ background-color: #fff; //cambiar blanco a variable
 //deleted posts
 .topic .posts >li.deleted .box {
 
-	opacity: 0.5;
+	.post-details { opacity: 0.5;
+			.userinfo-extra {
+				display:none;
+			}
+	}
 	.content {
 		background-color: @topic-details;
+		opacity: 0.5;
 	}
 	.sub-content {display: none; }
 	.group-badge { display: none; }
