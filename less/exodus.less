@@ -267,15 +267,16 @@ background-color: #fff; //cambiar blanco a variable
 }
 .topic .post-signature {
 	display: block;
-	max-height: 40px;
+	max-height: 50px;
+  line-height: 20px;
 	overflow: hidden;
 	margin-left: 0px;
-	padding-left: 5px;
-	padding-right: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 .topic .sub-content {
 	background-color: @topic-content;
-	min-height: 70px;
+	//min-height: 70px;
 	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
 	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
 	border-right: 1px solid @topic-border;
@@ -290,7 +291,7 @@ background-color: #fff; //cambiar blanco a variable
 	background-color: @topic-details;
 	display: block;
 	line-height: 30px;
-	min-height: 30px;
+	//min-height: 30px;
 	width: 100% !important;
 	text-align: right;
 	background-image: @pattern;
