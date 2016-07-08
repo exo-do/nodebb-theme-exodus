@@ -67,6 +67,15 @@
 	}
 }
 
+//sin margen en notificaciones para que sea mas homogeneo en el hover
+.header .notification-list li{
+	margin: 0px;
+}
+// y en los chats
+#menu .chat-list li, .header .chat-list li {
+	width: 300px;
+	margin: 0px;
+}
 /* -------------------------------------- STYLE ----------------------------------------*/
 
 
@@ -97,6 +106,36 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 @transition: all @speed ease;
 
 
+//añadimos el hover que ya hace boostrap a mas elementos para que sea homogeneo
+#header-menu .dropdown-menu>li>ul>li:hover{
+color: #262626 !important;
+background-color: #f5f5f5 !important;
+	a {
+		color: #262626 !important;	
+	}
+}
+#user-control-list li:hover a{
+		color: #262626 !important;;
+}
+.chats > ul > li:nth-child(2):hover a, .chats > ul > li:nth-child(3):hover a{
+	color: #262626 !important;;
+}
+.notifications > ul > li:nth-child(2):hover a, .notifications > ul > li:nth-child(3):hover a{
+	color: #262626 !important;;
+}
+#content .dropdown-menu>li:hover a{
+	color: #262626 !important;
+}
+
+
+//quitamos decoraciones
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+	outline: none;
+}
+a:focus, a:hover {
+	outline: none !important;
+	text-decoration: none !important;
+}
 //exodus button
 .btn-default, .btn-primary, .btn-warning, .btn-danger, .btn-info {
 
@@ -134,7 +173,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
   &:hover , &:focus{
 		z-index: auto !important;
-		color: #fff !important;
+		color: #fff;
 		//box-shadow: 0 0 0 2px #e4e4e4;
 		text-decoration: none;
 		box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14);
@@ -145,7 +184,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 //boostrap want to keep button text on black
 .open > .dropdown-toggle.btn-default {
-	color: #fff !important;
+	color: #fff;
 }
 
 //composer caret color
@@ -194,6 +233,14 @@ background-color: #fff; //cambiar blanco a variable
 	}
 }
 
+.topic a.permalink {
+	color: @primary;
+	text-decoration: none;
+}
+.topic a.permalink:hover, .topic a.permalink:focus, .topic a.permalink:active {
+	color: black; //cambiar
+	text-decoration: none;
+}
 .topic .posts .icon {
 	margin-top: 0px !important;
 }
