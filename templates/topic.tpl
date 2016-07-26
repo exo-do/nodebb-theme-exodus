@@ -172,7 +172,7 @@ var plantilla = '/api/recent';
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 
-	<ul component="topic" class="posts" data-tid="{tid}">
+	<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="<!-- IF posts.deleted -->deleted <!-- ENDIF posts.deleted --><!-- IF posts.isOP --> highlight-op<!-- ENDIF posts.isOP --><!-- IF posts.isFollow --> highlight-fw<!-- ENDIF posts.isFollow -->" <!-- IMPORT partials/data/topic.tpl -->>
 				<a component="post/anchor" data-index="{posts.index}" name="{posts.index}"></a>
@@ -181,6 +181,9 @@ var plantilla = '/api/recent';
 				<meta itemprop="dateModified" content="{posts.editedISO}">
 
 				<!-- IMPORT partials/topic/post.tpl -->
+				<!-- IF !posts.index -->
+ 				<div class="post-bar-placeholder"></div>
+ 				<!-- ENDIF !posts.index -->
 			</li>
 
 		<!-- END posts -->

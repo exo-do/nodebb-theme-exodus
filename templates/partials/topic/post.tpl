@@ -57,10 +57,9 @@
 	<div class="sub-content">
 	<div class="time">
 		<p>
-			<a class="permalink" href="{config.relative_path}/topic/{slug}/{function.getBookmarkFromIndex}"><span class="timeago" title="{posts.timestampISO}"></span></a>
+			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>
 			<i class="fa fa-pencil-square pointer edit-icon <!-- IF !posts.editor.username -->hidden<!-- ENDIF !posts.editor.username -->"></i>
-			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">
-				[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.relativeEditTime}"></span>
+			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
 			</small>
   		</p>
 	</div>
@@ -105,7 +104,7 @@
 
 		</span>
 		<!-- ENDIF !reputation:disabled -->
-		
+
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>

@@ -1,16 +1,11 @@
 {
 	"id": "nodebb-theme-exodus",
-	"library": "./lib/theme.js",
+	"library": "library.js",
 	"hooks": [
-			{
-				"hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true
-			},
-			{
-				"hook": "static:app.load", "method": "appLoad"
-			},
-			{
-				"hook": "action:post.save", "method": "posteando"
-			}
+			{ "hook": "filter:teasers.get", "method": "getTeasers" },
+			{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas", "callbacked": true },
+			{ "hook": "static:app.load", "method": "appLoad"},
+			{ "hook": "action:post.save", "method": "posteando"}
 	],
 	"scripts": [
 		"lib/persona.js",
@@ -18,6 +13,7 @@
 		"lib/modules/autohidingnavbar.min.js",
 		"lib/modules/slideout-notouch.min.js",
 		"lib/client/chats.js",
+		"/lib/theme.js",
 		"lib/sly.min.js",
 		"lib/modules/modernizr.js"
 	]

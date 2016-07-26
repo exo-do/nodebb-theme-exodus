@@ -7,10 +7,13 @@
 		</div>
 
 		<h2 class="title">
-			<!-- IMPORT partials/categories/link.tpl --><br />
-			<span class="description">
+			<!-- IMPORT partials/categories/link.tpl --><br/>
+			<!-- IF ../descriptionParsed -->
+			<div class="description">
 			{../descriptionParsed}
-			</span>
+			</div>
+			<!-- ENDIF ../descriptionParsed -->
+			{function.generateChildrenCategories}
 		</h2>
 		<span class="visible-xs pull-right">
 			<a class="permalink" href="{../teaser.url}">
@@ -28,7 +31,7 @@
 		<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 		<small>[[global:posts]]</small>
 	</div>
-	<div class="col-md-3 col-sm-3 teaser hidden-xs">
+	<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
 	<!-- ENDIF !../link -->
