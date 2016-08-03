@@ -675,6 +675,42 @@ background-color: #fff; //cambiar blanco a variable
     border-left-color: @primary;
 }
 
+/* -----------------------------------------------------------------------------------------*/
+
+.mobile-navbar {
+    min-height: 20px !important;
+
+		.category-name-container {
+			padding: 5px 5px !important;
+			//width: ~"calc(100% - 85px)" !important;
+		}
+
+		.composer-submit , .composer-discard {
+			color: #fff !important;
+			background-color: #337ab7 !important;
+			border-color: #2e6da4 !important;
+			padding: 0px !important;
+			line-height: 1.5 !important;
+			font-weight: normal !important;
+			border-left: 0 !important;
+			font-size: 20px !important;
+			width: inherit !important;
+			height: inherit !important;
+
+			&:hover {
+      background-color: #286090 !important;
+      border-color: #204d74 !important;
+			}
+
+		}
+}
+
+@media (min-width: 767px) {
+	.mobile-navbar > div {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+}
 
 /* -------------------------------------- SLIDEOUT ----------------------------------------*/
 

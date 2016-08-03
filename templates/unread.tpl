@@ -63,6 +63,7 @@
 	<hr class="hidden-xs"/>
 
 	<div class="category">
+		<div class="category-bar"><p class="hidden-xs">[[pages:unread]]</p></div>
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>
 
 		<a href="{config.relative_path}/{selectedFilter.url}{querystring}">
