@@ -1,5 +1,8 @@
-<div class="category">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
+<div widget-area="header"></div>
+<div class="row">
+<div class="category col-lg-9 col-sm-12" no-widget-class="category col-lg-12 col-sm-12" no-widget-target="sidebar">
+
 	<!-- IMPORT partials/category/subcategory.tpl -->
 
 	<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
@@ -13,10 +16,10 @@
 			<!-- ENDIF !loggedIn -->
 		<!-- ENDIF privileges.topics:create -->
 
-		<span class="pull-right">
+		<span class="pull-right" component="category/controls">
 			<!-- IMPORT partials/category/watch.tpl -->
-			<!-- IMPORT partials/category/tools.tpl -->
 			<!-- IMPORT partials/category/sort.tpl -->
+			<!-- IMPORT partials/category/tools.tpl -->
 		</span>
 	</div>
 
@@ -50,9 +53,10 @@
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 
-
 </div>
-
+<div widget-area="sidebar" class="col-lg-3 col-sm-12"></div>
+</div>
+ <div widget-area="footer"></div>
 <!-- IMPORT partials/move_thread_modal.tpl -->
 
 <!-- IF !config.usePagination -->

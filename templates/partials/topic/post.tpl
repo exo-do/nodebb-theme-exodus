@@ -54,7 +54,7 @@
 
 
 	</div>
-	<div class="sub-content">
+	<div class="sub-content post-footer">
 	<div class="time">
 		<p>
 			<a class="permalink" href="{config.relative_path}/post/{posts.pid}"><span class="timeago" title="{posts.timestampISO}"></span></a>

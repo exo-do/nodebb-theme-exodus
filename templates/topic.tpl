@@ -33,9 +33,11 @@ var plantilla = '/api/recent';
 
 <main class="cd-main-content">
 
+<!-- IMPORT partials/breadcrumbs.tpl -->
+<div widget-area="header"></div>
 <div class="row">
-<div class="topic col-lg-12">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="topic col-lg-9 col-sm-12" no-widget-class="topic col-lg-12 col-sm-12" no-widget-target="sidebar">
+
 	<a href="#" class="cd-btn pull-right"><i class="fa fa-clock-o"></i></a>
 
 	<h1 component="post/header" class="hidden-xs" itemprop="name">
@@ -126,8 +128,12 @@ var plantilla = '/api/recent';
 			<i class="fa fa-2x fa-angle-double-down pointer fa-fw pagebottom"></i>-->
 		</div>
 	</div>
+
+	</div>
+	<div widget-area="sidebar" class="col-lg-3 col-sm-12"></div>
 </div>
-</div>
+
+<div widget-area="footer"></div>
 <!-- IF !config.usePagination -->
 <noscript>
 	<!-- IMPORT partials/paginator.tpl -->
