@@ -33,8 +33,6 @@
 				}
 
 				.fa-check {
-					border: 1px solid @brand-success;
-					color: @brand-success;
 					padding: 14px;
 					border-radius: 50%;
 					position: absolute;
@@ -57,7 +55,7 @@
 				}
 
 				.fa-check, .user-img, .user-icon {
-					.transition(.2s ease-in-out opacity);
+					.transition(.2s ease-in-out all);
 				}
 
 				float: left;
@@ -70,12 +68,26 @@
 
 				.fa-check {
 					opacity: 1;
+					border: 1px solid @brand-success !important;
+					color: @brand-success !important;
+				}
+			}
+
+			.avatar .select:hover {
+				.user-img, .user-icon {
+					opacity: 0;
+				}
+
+				.fa-check {
+					border: 1px solid @brand-primary;
+					color: @brand-primary;
+					opacity: 1;
 				}
 			}
 
 			.tag-list {
+				display: inline-block;
 				.tag {
-					display: inline-block;
 					text-transform: uppercase;
 					font-size: 10px;
 					background: lighten(@gray-lighter, 2.5%);

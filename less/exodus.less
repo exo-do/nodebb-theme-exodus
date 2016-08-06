@@ -144,7 +144,6 @@ background-color: #f5f5f5 !important;
 	color: #262626 !important;
 }
 
-
 //quitamos decoraciones
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
 	outline: none;
@@ -153,6 +152,8 @@ a:focus, a:hover {
 	outline: none !important;
 	text-decoration: none !important;
 }
+
+
 //exodus button
 .btn-default, .btn-primary, .btn-warning, .btn-danger, .btn-info {
 
@@ -412,7 +413,10 @@ background-color: #fff; //cambiar blanco a variable
 
 
 /* -------------------------------------- CATEGORY ----------------------------------------*/
-.category>ul>li:not(.unread) h2 a:hover {color: black;} //cambiar
+.category>ul>li:not(.unread) h2 a:hover {color: @primary;} //cambiar
+.category>ul {.unread h2 small a {color: #555;}} //keep unread in black
+.category>ul {.unread h2 small a:hover {color: @primary;}}
+
 .category {
 
 	.topic-list {
@@ -512,6 +516,14 @@ background-color: #fff; //cambiar blanco a variable
 		}
 	}
 
+	#new-topics-alert {
+		background-color: @primary;
+    border-color: #555;
+    color: #fff;
+    position: absolute;
+    right: 60px;
+    top: 100px;
+	}
 }
 
 
@@ -532,8 +544,8 @@ background-color: #fff; //cambiar blanco a variable
 		.teaser {
 			//width: 30%;
 			.card {
-				height: 45px;
-				padding-top: 3px;
+				height: 53px;
+				margin-bottom: 3px;
 
 				.post-content {
 					font-size:11px;
@@ -552,8 +564,15 @@ background-color: #fff; //cambiar blanco a variable
 				padding-top: 5px;
 				padding-bottom: 5px;
 				a {
-					font-size: 13px;
+					font-size: 14px;
 				}
+			}
+
+			.category-children a {
+				font-size: 20px;
+			}
+			.category-children a:hover small{
+				color: @primary;
 			}
 
 			.avatar {
@@ -568,10 +587,14 @@ background-color: #fff; //cambiar blanco a variable
 			}
 
 			.icon {
-				min-width: 40px;
-				min-height: 40px;
-				margin-top: 3px
+				min-width: 46px;
+				min-height: 46px;
+				margin-top: 3px;
+				i {
+					vertical-align: middle;
+				}
 			}
+
 		}
 		&:last-child {
 			border-bottom: 1px solid #ddd !important;
