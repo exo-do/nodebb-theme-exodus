@@ -1,81 +1,45 @@
-<script type="text/javascript">
+<div component="pagination" class="text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
+	<ul class="pagination hidden-xs">
+		<li class="previous pull-left<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
+			<a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
+		</li>
 
-jQuery(function ($) {
-
-	'use strict';
-
-	(function () {
-	var $frame  = $('#basic');
-	var $slidee = $frame.children('ul').eq(0);
-	var $wrap   = $frame.parent();
-
-
-
-	var options = {
-	  	horizontal: 1,
-		itemNav: 'basic',
-		smart: 1,
-		activateOn: 'click',
-		mouseDragging: 1,
-		touchDragging: 1,
-		releaseSwing: 1,
-		scrollBar: $wrap.find('.scrollbar'),
-		scrollBy: 2,
-		scrollTrap: true,
-		pagesBar: $wrap.find('.pages'),
-		activatePageOn: 'click',
-		speed: 200,
-		moveBy: 300,
-		elasticBounds: 1,
-		dragHandle: 1,
-		dynamicHandle: 1,
-		clickBar: 1,
-		prevPage: $wrap.find('.prevPage'),
-		nextPage: $wrap.find('.nextPage')
-
-  	};
-
-
-	var fn,fn1,fn2;
-  	var sly = new Sly('#basic', options, {
-    	load: function () {
-    		this.activate(this.getIndex($wrap.find('.active')));
-		},
-		move: [
-			function () {},
-	        function () {}
-		]
-    }).init();
-
-	}());
-});
-</script>
-
-<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-<div class="scrollbar ">
-	<div class="handle">
-		<div class="mousearea"></div>
-	</div>
-</div>
-<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
-<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-
-<div id="basic" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-<ul class="slidee">
-
-			<!-- BEGIN pages -->
+		<!-- BEGIN pages -->
 			<!-- IF pagination.pages.separator -->
 			<li component="pagination/select-page" class="page select-page">
-				<a href="#" style="display:block;"><i class="fa fa-ellipsis-h"></i></a>
+				<a href="#"><i class="fa fa-ellipsis-h"></i></a>
 			</li>
 			<!-- ELSE -->
 			<li class="page<!-- IF pagination.pages.active --> active<!-- ENDIF pagination.pages.active -->" >
-				<a href="?{pagination.pages.qs}" data-page="{pagination.pages.page}" style="display:block;">{pagination.pages.page}</a>
+				<a href="?{pagination.pages.qs}" data-page="{pagination.pages.page}">{pagination.pages.page}</a>
 			</li>
 			<!-- ENDIF pagination.pages.separator -->
+		<!-- END pages -->
 
-			<!-- END pages -->
+		<li class="next pull-right<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
+			<a href="?{pagination.next.qs}" data-page="{pagination.next.page}"> <i class="fa fa-chevron-right"></i></a>
+		</li>
 	</ul>
 
-</div>
+	<ul class="pagination hidden-sm hidden-md hidden-lg">
+		<li class="first<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
+			<a href="?page=1" data-page="1"><i class="fa fa-fast-backward"></i> </a>
+		</li>
+
+		<li class="previous<!-- IF !pagination.prev.active --> disabled<!-- ENDIF !pagination.prev.active -->">
+			<a href="?{pagination.prev.qs}" data-page="{pagination.prev.page}"><i class="fa fa-chevron-left"></i> </a>
+		</li>
+
+		<li component="pagination/select-page" class="page select-page">
+			<a href="#">{pagination.currentPage} / {pagination.pageCount}</a>
+		</li>
+
+		<li class="next<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
+			<a href="?{pagination.next.qs}" data-page="{pagination.next.page}"> <i class="fa fa-chevron-right"></i></a>
+		</li>
+
+		<li class="last<!-- IF !pagination.next.active --> disabled<!-- ENDIF !pagination.next.active -->">
+			<a href="?page={pagination.pageCount}" data-page="{pagination.pageCount}"><i class="fa fa-fast-forward"></i> </a>
+		</li>
+	</ul>
 </div>

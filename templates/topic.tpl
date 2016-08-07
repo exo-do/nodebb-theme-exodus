@@ -1,5 +1,4 @@
 
-
 <script>
 jQuery(document).ready(function($){
 	//open the lateral panel
@@ -55,6 +54,10 @@ var plantilla = '/api/recent';
 
 	<hr class="visible-xs" />
 
+	<!-- IF config.usePagination -->
+	<!-- IMPORT partials/paginator.tpl -->
+	<!-- ENDIF config.usePagination -->
+
 	<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="<!-- IF posts.deleted -->deleted <!-- ENDIF posts.deleted --><!-- IF posts.isOP --> highlight-op<!-- ENDIF posts.isOP --><!-- IF posts.isFollow --> highlight-fw<!-- ENDIF posts.isFollow -->" <!-- IMPORT partials/data/topic.tpl -->>
@@ -78,7 +81,6 @@ var plantilla = '/api/recent';
 	</div>
 
 	<!-- IF config.usePagination -->
-
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 
