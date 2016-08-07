@@ -1,6 +1,4 @@
-	<!-- IF config.usePagination -->
-		<!-- IMPORT partials/paginator_plus2x.tpl -->
-	<!-- ENDIF config.usePagination -->
+
 
 <script>
 jQuery(document).ready(function($){
@@ -57,22 +55,6 @@ var plantilla = '/api/recent';
 
 	<hr class="visible-xs" />
 
-	<!-- IF config.usePagination -->
-	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-	<div class="scrollbar visible-xs">
-		<div class="handle">
-			<div class="mousearea"></div>
-		</div>
-	</div>
-	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
-	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
-
-	<div id="basic2" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-	<ul class="slidee">
-
-	<!-- IMPORT partials/paginator.tpl -->
-	<!-- ENDIF config.usePagination -->
-
 	<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 		<!-- BEGIN posts -->
 			<li component="post" class="<!-- IF posts.deleted -->deleted <!-- ENDIF posts.deleted --><!-- IF posts.isOP --> highlight-op<!-- ENDIF posts.isOP --><!-- IF posts.isFollow --> highlight-fw<!-- ENDIF posts.isFollow -->" <!-- IMPORT partials/data/topic.tpl -->>
@@ -96,17 +78,7 @@ var plantilla = '/api/recent';
 	</div>
 
 	<!-- IF config.usePagination -->
-	<div class="example <!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-	<div class="scrollbar visible-xs">
-		<div class="handle">
-			<div class="mousearea"></div>
-		</div>
-	</div>
-	<div class="backward"><a href="?page=1"><i class="fa fa-angle-double-left"></i></a></div>
-	<div class="forward"><a href="?page={pagination.pageCount}"><i class="fa fa-angle-double-right"></i></a></div>
 
-	<div id="basic" component="pagination" class="frame text-center pagination-container<!-- IF !pagination.pages.length --> hidden<!-- ENDIF !pagination.pages.length -->">
-	<ul class="slidee">
 	<!-- IMPORT partials/paginator.tpl -->
 	<!-- ENDIF config.usePagination -->
 

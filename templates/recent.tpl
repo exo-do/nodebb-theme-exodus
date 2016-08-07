@@ -14,6 +14,7 @@
 	</div>
 
 	<hr class="hidden-xs"/>
+	<br class="visible-xs"/><br class="visible-xs"/>
 
 	<div class="category">
 

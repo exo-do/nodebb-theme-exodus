@@ -38,7 +38,7 @@
 <!-- ENDIF posts.display_move_tools -->
 <li role="presentation" class="divider"></li>
 <!-- ENDIF posts.display_moderator_tools -->
-<!--
+
 <!-- IF !posts.deleted -->
 <!-- IF config.loggedIn -->
 <li role="presentation">
@@ -54,6 +54,7 @@
 <!-- ENDIF config.loggedIn -->
 
 <!-- IF postSharing.length -->
+<li role="presentation" class="divider"></li>
 <li role="presentation" class="dropdown-header">[[topic:share_this_post]]</li>
 <!-- ENDIF postSharing.length -->
 <!-- BEGIN postSharing -->

@@ -76,12 +76,17 @@
 // logo by exodo
 .header .forum-logo {
 	margin-top: 15px;
+	margin-right: 5px;
 	width: 107px;
 	height: 20px;
 	margin-left: -6px;
 	@media (max-width: @screen-xs-max){
 			margin-left: 20px;
 	}
+}
+
+.header .navbar-toggle .notification-icon {
+    top: 16px;  //vertical align
 }
 
 //sin margen en notificaciones para que sea mas homogeneo en el hover
@@ -93,6 +98,8 @@
 	width: 300px;
 	margin: 0px;
 }
+
+
 /* -------------------------------------- STYLE ----------------------------------------*/
 
 
@@ -177,16 +184,15 @@ a:focus, a:hover {
   span, a {
 		color: inherit;
 		line-height: inherit;
-		//vertical-align:inherit;
 	  font-size: 13px;
 	}
 
   .fa {
     line-height: inherit;
-	  vertical-align:inherit;
+	  vertical-align:middle;;
 	  min-width: 25px;
 	  font-size: 16px;
-		margin-top: -3px;
+		//margin-top: -3px;
   }
 
   &:hover , &:focus{
@@ -229,7 +235,12 @@ a:focus, a:hover {
     padding: 3px 0px;
 }
 
-
+.unread {
+	.btn-toolbar {
+    margin-top: 50px;
+    padding-bottom: 10px;
+	}
+}
 
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
@@ -329,6 +340,7 @@ background-color: #fff; //cambiar blanco a variable
 	padding: 5px 15px 5px 5px;
 	text-align: right;
 	margin-left: 0px;
+	font-size: 11px;
 }
 .topic .post-signature {
 	display: block;
@@ -516,13 +528,17 @@ background-color: #fff; //cambiar blanco a variable
 		}
 	}
 
+
 	#new-topics-alert {
 		background-color: @primary;
-    border-color: #555;
     color: #fff;
-    position: absolute;
-    right: 60px;
-    top: 100px;
+		font-size: 12px;
+		position: absolute;
+		@media (max-width: @screen-xs-max){ //mobile
+				margin-top: -40px;
+		}
+		margin-top: -80px;
+		padding: 5px;
 	}
 }
 
@@ -669,7 +685,7 @@ background-color: #fff; //cambiar blanco a variable
 .example .frame ul li.active a:hover { color: #fff }
 
 .example .scrollbar { margin: 0 auto 2px; width: auto; height: 5px; line-height: 0; }
-.example .scrollbar .handle { width: 100px; height: 100%; background: @topic-header; cursor: pointer; }
+.example .scrollbar .handle { width: 100px; height: 50%; background: @topic-details; cursor: pointer; }
 .example .scrollbar .handle .mousearea { position: absolute; top: -9px; left: 0; width: 100%; height: 50px; }
 
 .example .pages { list-style: none; margin: 20px 0; padding: 0; text-align: center; }

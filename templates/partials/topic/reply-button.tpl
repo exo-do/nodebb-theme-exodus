@@ -6,7 +6,7 @@ visible-lg-inline">[[topic:reply]]</span><i class="fa fa-reply"></i></button>
 	<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 		<span class="caret"></span>
 	</button>
-	<ul class="dropdown-menu pull-right" role="menu">
+	<ul class="dropdown-menu pull-left" role="menu">
 		<li><a href="#" component="topic/reply-as-topic">[[topic:reply-as-topic]]</a></li>
 	</ul>
 </div>
