@@ -4,7 +4,7 @@
 	<li component="category/topic" class="row clearfix {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="col-lg-7 col-md-7 col-sm-9 col-xs-10 content">
+		<div class="col-lg-7 col-md-7 col-sm-9 col-xs-11 content">
 			<div class="avatar pull-left" title="{topics.user.username}">
 				<!-- IF showSelect -->
 				<div class="select" component="topic/select">
@@ -22,7 +22,7 @@
 				<!-- ENDIF showSelect -->
 
 				<!-- IF !showSelect -->
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
+				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" class="pull-left">
 					<!-- IF topics.thumb -->
  					<img src="{topics.thumb}" class="user-img" />
  					<!-- ELSE -->
@@ -40,14 +40,21 @@
 				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
 				<!-- IF !topics.noAnchor -->
-				<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a><br />
+				<div class="topictitle"><a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a></div>
 				<!-- ELSE -->
-				{topics.title}<br />
+				<div class="topictitle">{topics.title}</div>
 				<!-- ENDIF !topics.noAnchor -->
 
 				<!-- IF !template.category -->
-				<small>
-					<a href="{config.relative_path}/category/{topics.category.slug}"><span class="fa-stack fa-lg"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span> {topics.category.name}</a> &bull;
+				<small class="hidden-xs">
+				<a href="{config.relative_path}/category/{topics.category.slug}" title="{topics.category.name}">
+				<span> {topics.category.name}</span> &bull;
+				</a>
+				</small>
+				<small class="visible-xs-inline">
+				<a href="{config.relative_path}/category/{topics.category.slug}" title="{topics.category.name}">
+					<span class="fa-stack fa-lg visible-xs-inline"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span>
+				</a>
 				</small>
 				<!-- ENDIF !template.category -->
 
@@ -58,9 +65,10 @@
 					<!-- IF topics.tags.length --><small>&bull;</small><!-- ENDIF topics.tags.length -->
 				</span>
 				-->
-				<!--<small> {topics.user.username} </small>-->
-				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span> &bull; <a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a></small>
-				
+
+				<small><a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->">{topics.user.username}</a> &bull;</small>
+				<small class="hidden-xs"><span class="timeago" title="{topics.timestampISO}"></span></small>
+
 				<small class="visible-xs-inline">
 					<!-- IF topics.teaser.timestamp -->
 					<span class="timeago" title="{topics.teaser.timestampISO}"></span>
@@ -71,8 +79,19 @@
 			</h2>
 		</div>
 
-		<div class="mobile-stat col-xs-2 visible-xs text-right">
-			<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
+		<div class="mobile-stat col-xs-1 visible-xs text-right">
+			 <!--<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>-->
+			<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+				<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="human-readable-number fa fa-inverse fa-stack-1x">{topics.postcount}</i></span>
+			</a>
+		</div>
+
+		<div class="col-lg-1 col-md-1 hidden-sm hidden-xs stats">
+			<span>
+				<!-- IF !template.category -->
+					<a href="{config.relative_path}/category/{topics.category.slug}"  title="{topics.category.name}"><span class="fa-stack fa-lg"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span></a>
+				<!-- ENDIF !template.category -->
+			</span>
 		</div>
 
 		<div class="col-lg-1 col-md-1 hidden-sm hidden-xs stats">
@@ -85,7 +104,7 @@
 			<small>[[global:views]]</small>
 		</div>
 
-		<div class="col-lg-3 col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+		<div class="col-lg-2 col-md-2 col-sm-3 teaser hidden-xs" component="topic/teaser">
 			<div class="card" style="border-color: {topics.category.bgColor}">
 				<!-- IF topics.unreplied -->
 				<p>

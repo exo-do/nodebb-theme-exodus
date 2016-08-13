@@ -3,7 +3,7 @@
 /* -------------------------------------- HEADER ----------------------------------------*/
 
 //main margin and padding
-@media (min-width: @screen-xs-max){ // no mobile
+@media (min-width: @screen-xs-max){ // no mobile 767px
 	.navbar > div{
 		margin-left: 20px;
 		margin-right: 20px;
@@ -11,21 +11,31 @@
 	#content  {
 		margin-left: 20px;
 		margin-right: 20px;
-		padding-top: 30px;
+		padding-top: 10px;
 	}
 }
 
-@media (max-width: @screen-xs-max){ //mobile
-
+@media (max-width: @screen-xs-max){ //mobile 767px
 	.container-fluid {
     padding-left: 0px;
     padding-right: 0px;
-}
+	}
 	#content  {
 		margin-left: 15px;
 		margin-right: 15px;
 	}
+}
 
+@media (min-width: 1800px){ //mega pantallas
+	.navbar > div{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	#content  {
+		margin-left: 80px;
+		margin-right: 80px;
+		padding-top: 10px;
+	}
 }
 
 // navbar colors
@@ -429,6 +439,10 @@ background-color: #fff; //cambiar blanco a variable
 .category>ul {.unread h2 small a {color: #555;}} //keep unread in black
 .category>ul {.unread h2 small a:hover {color: @primary;}}
 
+.category>ul>li .fa-stack {
+    font-size: 100%;
+}
+
 .category {
 
 	.topic-list {
@@ -440,7 +454,7 @@ background-color: #fff; //cambiar blanco a variable
 		> li {
 			padding-top: 0px;
 			padding-bottom: 0px;
-			min-height: 52px;
+			min-height: 42px;
 			border-top: 1px solid #ddd  !important;
 			border-left: 1px solid #ddd ;
 			border-right: 1px solid #ddd ;
@@ -450,7 +464,7 @@ background-color: #fff; //cambiar blanco a variable
 			.teaser {
 				//width: 30%;
 				.card {
-					height: 45px;
+					height: 31px;
 					padding-top: 3px;
 
 					.post-content {
@@ -459,18 +473,50 @@ background-color: #fff; //cambiar blanco a variable
 				}
 			}
 
+			.select .fa-check {
+    		padding: 9px !important;
+			}
+
 			.content {
+
+				@media (max-width: @screen-xs-max){
+					padding-left: 5px;
+					padding-right: 0px;
+				}
 
 				padding-left: 15px;
 				padding-right: 10px;
 
+
 				h2 {
-					margin-left: 55px;
+					margin-left: 45px;
 					line-height: 15px;
 					padding-top: 5px;
 					padding-bottom: 5px;
+
+					.topictitle {
+						a {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						display: -webkit-box;
+						line-height: 16px;     /* fallback */
+						max-height: 32px;      /* fallback */
+						-webkit-line-clamp: 2; /* number of lines to show */
+						-webkit-box-orient: vertical;
+						display: -moz-box;
+						}
+					}
+					small {
+						@media (max-width: 767px){
+							.visible-xs-inline {
+    						display: inline-block !important;
+							}
+						}
+					}
 					a {
 						font-size: 13px;
+						line-height: 10px;
+						padding-bottom: 2px;
 					}
 				}
 
@@ -478,9 +524,9 @@ background-color: #fff; //cambiar blanco a variable
 				padding-top: 5px;
 
 				.user-icon,.user-img {
-					width: 40px;
-					height: 40px;
-					line-height: 40px;
+					width: 35px;
+					height: 35px;
+					line-height: 35px;
 					margin-right: 0px;
 					}
 				}
@@ -493,6 +539,10 @@ background-color: #fff; //cambiar blanco a variable
 			}
 			&:last-child {
 				border-bottom: 1px solid #ddd !important;
+			}
+
+			.mobile-stat {
+						padding-right: 5px;
 			}
 		}
 	}
@@ -517,15 +567,16 @@ background-color: #fff; //cambiar blanco a variable
 
 	.stats {
 		line-height: 15px;
-		padding-top: 5px;
+		//padding-top: 5px;
 		margin-top: 5px;
 		font-size: 15px;
-		width: 5%;
+		//width: 5%;
 		padding-right: 2px;
 		padding-left: 2px;
 		small {
 			font-size: 12px;
 		}
+
 	}
 
 
@@ -625,7 +676,7 @@ background-color: #fff; //cambiar blanco a variable
 		padding-top: 5px;
 		margin-top: 5px;
 		font-size: 15px;
-		width: 5%;
+		//width: 5%;
 		padding-right: 2px;
 		padding-left: 2px;
 		small {
