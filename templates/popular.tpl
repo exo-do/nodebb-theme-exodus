@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 
 <div class="popular">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
-	<a href="#0" class="cd-btn pull-right">Fire Panel</a>
+	<a href="#0" class="cd-btn pull-right hidden">Fire Panel</a>
 	<ul class="nav nav-pills" component="popular/tab">
 		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>
 		<li><a href='{config.relative_path}/popular/weekly'>[[recent:week]]</a></li>
