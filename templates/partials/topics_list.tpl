@@ -39,6 +39,7 @@
 			<h2 component="topic/header" class="title">
 				<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"></i>
 				<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->"></i>
+
 				<!-- IF !topics.noAnchor -->
 				<div class="topictitle"><a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a></div>
 				<!-- ELSE -->
@@ -47,10 +48,11 @@
 
 				<!-- IF !template.category -->
 				<small class="hidden-xs">
-				<a href="{config.relative_path}/category/{topics.category.slug}" title="{topics.category.name}">
-				<span> {topics.category.name}</span> &bull;
-				</a>
+					<a href="{config.relative_path}/category/{topics.category.slug}" title="{topics.category.name}">
+						<span> {topics.category.name}</span>
+					</a>&bull;
 				</small>
+
 				<small class="visible-xs-inline">
 				<a href="{config.relative_path}/category/{topics.category.slug}" title="{topics.category.name}">
 					<span class="fa-stack fa-lg visible-xs-inline"><i style="color:{topics.category.bgColor};"class="fa fa-circle fa-stack-2x"></i><i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i></span>
@@ -80,7 +82,6 @@
 		</div>
 
 		<div class="mobile-stat col-xs-1 visible-xs text-right">
-			 <!--<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>-->
 			<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 				<span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="human-readable-number fa fa-inverse fa-stack-1x">{topics.postcount}</i></span>
 			</a>

@@ -26,7 +26,7 @@
 	}
 }
 
-@media (min-width: 1800px){ //mega pantallas
+@media (min-width: 2400px){ //mega pantallas
 	.navbar > div{
 		margin-left: 40px;
 		margin-right: 40px;
@@ -252,6 +252,24 @@ a:focus, a:hover {
 	}
 }
 
+//tags
+.tag-topic-count {
+	color: @primary;
+}
+
+//pagination default
+.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+	background-color: @primary;
+	border-color: @primary;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+	color: @primary;
+}
+.pagination>li>a {
+	color: @primary;
+}
+
+
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
 
@@ -267,7 +285,16 @@ background-color: #fff; //cambiar blanco a variable
 .topic h1 {
 	text-align: center;
 	color: @primary;
-	span:first-letter{
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+	.topic-title {
+		display: inline-block;
+		@media (max-width: @screen-xs-max){
+			font-size: 17px;
+		}
+	}
+	.topic-title:first-letter{
 		text-transform: uppercase;
 	}
 }
@@ -331,26 +358,53 @@ background-color: #fff; //cambiar blanco a variable
   	}
 }
 
+.topic .box {
+	background-color: @topic-details;
+	background-image: @pattern;
+	display: -moz-box;
+	display: -webkit-flexbox;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	border-right: 1px solid @topic-border;
+	border-left: 1px solid @topic-border;
+}
+
 .topic .post-details {
-	float: left;
+	//float: left;
 	text-align: center;
 	background-color: @topic-details;
 	background-image: @pattern;
 }
+
+.topic .right-content {
+
+		display: flex;
+	  flex-direction: column;
+		flex: 1 0;
+}
 .topic .content {
+
+	flex: 1 0;
 	padding: 15px 15px 0px 15px;
 	margin-top: 0px !important;
 	margin-left: 0px !important;
 	background-color: @topic-content;
-	border-right: 1px solid @topic-border;
+	//border-right: 1px solid @topic-border;
 	@media (min-width: @screen-xs-max /*  767px*/) {min-height: 128px;}
-	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
+	//@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
+
 }
 .topic .time {
 	padding: 5px 15px 5px 5px;
 	text-align: right;
 	margin-left: 0px;
-	font-size: 11px;
+	font-size: 13px;
 }
 .topic .post-signature {
 	display: block;
@@ -364,13 +418,9 @@ background-color: #fff; //cambiar blanco a variable
 .topic .sub-content {
 	background-color: @topic-content;
 	//min-height: 70px;
-	@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
-	@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
-	border-right: 1px solid @topic-border;
-}
-.topic .box {
-	background-color: @topic-details;
-	background-image: @pattern;
+	//@media (min-width: @screen-xs-max /*  767px*/) {margin-left: 128px;}
+	//@media (max-width: @screen-xs-max /*  767px*/) {border-left: 1px solid @topic-border;}
+	//border-right: 1px solid @topic-border;
 }
 
 .topic .posts .links-bar small{
@@ -389,7 +439,9 @@ background-color: #fff; //cambiar blanco a variable
 	font-size: 12px;
 }
 
-.topic .post .links-bar {
+.topic .posts .links-bar {
+	border-right: 1px solid @topic-border;
+	border-left: 1px solid @topic-border;
 	border-bottom: 1px solid @topic-border;
 }
 
@@ -408,6 +460,9 @@ background-color: #fff; //cambiar blanco a variable
 	}
 }
 
+.group-badge{
+	padding: 10px;
+}
 
 //bookmark HR easeinout
 .topic hr {
@@ -659,6 +714,7 @@ background-color: #fff; //cambiar blanco a variable
 				margin-top: 3px;
 				i {
 					vertical-align: middle;
+					color: white; //cambiar
 				}
 			}
 

@@ -35,11 +35,13 @@ var plantilla = '/api/recent';
 <div class="row">
 <div class="topic col-lg-9 col-sm-12" no-widget-class="topic col-lg-12 col-sm-12" no-widget-target="sidebar">
 
-	<a href="#" class="cd-btn pull-right"><i class="fa fa-clock-o"></i></a>
+	<a href="#" class="cd-btn pull-right hidden"><i class="fa fa-clock-o"></i></a>
 
-	<h1 component="post/header" class="hidden-xs" itemprop="name">
+	<h1 component="post/header" class="" itemprop="name">
 
-		<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
+		<a href="{config.relative_path}/topic/{slug}">
+			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->"></i> <i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->"></i> <span class="topic-title" component="topic/title">{title}</span>
+		</a>
 
 		<span class="browsing-users hidden hidden-xs hidden-sm pull-right">
 			<span>[[category:browsing]]</span>

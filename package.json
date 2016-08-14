@@ -5,9 +5,9 @@
     "id": "nodebb-theme-exodus",
     "name": "Theme Exodus",
     "type": "theme",
-    "compatibility": "^0.8.2 || ^0.9.0 || ^1.0.0"
+    "compatibility": "^1.0.0"
   },
-  "description": "IN DEVELOPMENT || Persona theme for NodeBB by Exodo",
+  "description": "Custom Persona theme for NodeBB by Exodo",
   "main": "theme.less",
   "repository": {
     "type": "git",

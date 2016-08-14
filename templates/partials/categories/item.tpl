@@ -2,9 +2,17 @@
 	<meta itemprop="name" content="{../name}">
 
 	<div class="col-md-7 col-sm-9 col-xs-12 content">
-		<div class="icon pull-left" style="{function.generateCategoryBackground}">
-			<i class="fa fa-fw {../icon}"></i>
-		</div>
+
+			<!-- IF ../link -->
+			<a href="{../link}" itemprop="url" target="_blank">
+			<!-- ELSE -->
+			<a href="{config.relative_path}/category/{../slug}" itemprop="url">
+			<!-- ENDIF ../link -->
+				<div class="icon pull-left" style="{function.generateCategoryBackground}">
+					<i class="fa fa-fw {../icon}"></i>
+				</div>
+			</a>
+
 
 		<h2 class="title">
 			<!-- IMPORT partials/categories/link.tpl --><br/>
