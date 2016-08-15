@@ -453,10 +453,10 @@ background-color: #fff; //cambiar blanco a variable
 	color: @topic-header-text;
 }
 .topic .votes {
-	padding-right: 5px;
+	padding-right: 10px;
 
 	a {
-		padding: 3px;
+		padding: 10px;
 	}
 }
 
@@ -490,6 +490,7 @@ background-color: #fff; //cambiar blanco a variable
 
 
 /* -------------------------------------- CATEGORY ----------------------------------------*/
+
 .category>ul>li:not(.unread) h2 a:hover {color: @primary;} //cambiar
 .category>ul {.unread h2 small a {color: #555;}} //keep unread in black
 .category>ul {.unread h2 small a:hover {color: @primary;}}
@@ -598,6 +599,7 @@ background-color: #fff; //cambiar blanco a variable
 
 			.mobile-stat {
 						padding-right: 5px;
+						padding-top: 12px;
 			}
 		}
 	}
@@ -634,6 +636,13 @@ background-color: #fff; //cambiar blanco a variable
 
 	}
 
+[component="topic/pinned"]{
+	font-size: 18px;
+}
+
+[component="topic/locked"]{
+	font-size: 18px;
+}
 
 	#new-topics-alert {
 		background-color: @primary;
