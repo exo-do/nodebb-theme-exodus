@@ -4,6 +4,11 @@
 	display: none;
 	z-index: 10001;
 
+	// Bootswatch fix
+	&.navbar-fixed-bottom {
+		z-index: 10001;
+	}
+
 	left: auto;
 
 	margin-top: 0;
@@ -111,9 +116,10 @@
 					padding: 1px 2px;
 					font-family: @font-family-sans-serif;
 				}
+
 				&.new[data-content="0"]:after {
- 					display: none;
- 				}
+					display: none;
+				}
 			}
 
 			&.taskbar-composer, &.taskbar-chat {

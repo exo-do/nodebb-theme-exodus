@@ -90,28 +90,6 @@
 			</div>
 			<!-- ENDIF !disableEmailSubscriptions -->
 
-			<!-- IF sessions.length -->
-			<h4>[[global:sessions]]</h4>
-			<ul class="list-group" component="user/sessions">
-				<!-- BEGIN sessions -->
-				<li class="list-group-item" data-uuid="{../uuid}">
-					<div class="pull-right">
-						<!-- IF !../current -->
-						<button class="btn btn-xs btn-default" type="button" data-action="revokeSession">Revoke Session</button>
-						<!-- ENDIF !../current -->
-						{function.userAgentIcons}
-						<i class="fa fa-circle text-<!-- IF ../current -->success<!-- ELSE -->muted<!-- ENDIF ../current -->"></i>
-					</div>
-					{../browser} {../version} on {../platform}<br />
-					<small class="timeago text-muted" title="{../datetimeISO}"></small>
-					<ul>
-						<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
-					</ul>
-				</li>
-				<!-- END sessions -->
-			</ul>
-			<!-- ENDIF sessions.length -->
-
 			<!-- BEGIN customSettings -->
 			<h4>{customSettings.title}</h4>
 			<div class="well">
@@ -178,12 +156,51 @@
 			</div>
 
 
-			<h4>[[global:header.notifications]]</h4>
+			<h4>[[user:notifications_and_sounds]]</h4>
 			<div class="well">
-				<div class="checkbox">
-					<label>
-						<input type="checkbox" data-property="notificationSounds" <!-- IF settings.notificationSounds -->checked<!-- ENDIF settings.notificationSounds -->> <strong>[[user:notification_sounds]]</strong>
-					</label>
+				<label for="notification">[[user:notification-sound]]</label>
+				<div class="row">
+					<div class="form-group col-xs-9">
+						<select class="form-control" id="notification" name="notification" data-property="notificationSound">
+							<option value="">[[user:no-sound]]</option>
+							<!-- BEGIN notificationSound -->
+							<option value="{notificationSound.name}" <!-- IF notificationSound.selected -->selected<!-- ENDIF notificationSound.selected -->>{notificationSound.name}</option>
+							<!-- END notificationSound -->
+						</select>
+					</div>
+					<div class="btn-group col-xs-3">
+						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
+					</div>
+				</div>
+
+				<label for="chat-incoming">[[user:incoming-message-sound]]</label>
+				<div class="row">
+					<div class="form-group col-xs-9">
+						<select class="form-control" id="chat-incoming" name="chat-incoming" data-property="incomingChatSound">
+							<option value="">[[user:no-sound]]</option>
+							<!-- BEGIN incomingChatSound -->
+							<option value="{incomingChatSound.name}" <!-- IF incomingChatSound.selected -->selected<!-- ENDIF incomingChatSound.selected -->>{incomingChatSound.name}</option>
+							<!-- END incomingChatSound -->
+						</select>
+					</div>
+					<div class="btn-group col-xs-3">
+						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
+					</div>
+				</div>
+
+				<label for="chat-outgoing">[[user:outgoing-message-sound]]</label>
+				<div class="row">
+					<div class="form-group col-xs-9">
+						<select class="form-control" id="chat-outgoing" name="chat-outgoing" data-property="outgoingChatSound">
+							<option value="">[[user:no-sound]]</option>
+							<!-- BEGIN outgoingChatSound -->
+							<option value="{outgoingChatSound.name}" <!-- IF outgoingChatSound.selected -->selected<!-- ENDIF outgoingChatSound.selected -->>{outgoingChatSound.name}</option>
+							<!-- END outgoingChatSound -->
+						</select>
+					</div>
+					<div class="btn-group col-xs-3">
+						<button type="button" class="form-control btn btn-sm btn-default" data-action="play"><span class="hidden-xs">[[global:play]] </span><i class="fa fa-play"></i></button>
+					</div>
 				</div>
 			</div>
 		</div>

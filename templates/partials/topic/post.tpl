@@ -49,8 +49,8 @@
 	<div class="right-content">
 	<div class="content" component="post/content" itemprop="text">
 		<!-- IF posts.toPid -->
-		<button component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></button>
-  		<!-- ENDIF posts.toPid -->
+		<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+  	<!-- ENDIF posts.toPid -->
 
 		{posts.content}
 
@@ -101,6 +101,15 @@
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
+	<!-- IF !hideReplies -->
+	<a component="post/reply-count" href="#" class="no-select <!-- IF !posts.replies -->hidden<!-- ENDIF !posts.replies -->">
+		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
+		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
+		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
+		<span component="post/reply-count/text" data-replies="{posts.replies}">[[topic:replies_to_this_post, {posts.replies}]]</span>
+	</a>
+	<!-- ENDIF !hideReplies -->
+
 </div>
 
 <hr />

@@ -1,11 +1,11 @@
 {
   "name": "nodebb-theme-exodus",
-  "version": "5.0.0",
+  "version": "5.1.0",
  "nbbpm": {
     "id": "nodebb-theme-exodus",
     "name": "Theme Exodus",
     "type": "theme",
-    "compatibility": "^1.0.0"
+    "compatibility": "^0.8.2 || ^0.9.0 || ^1.0.0 || ^1.3.0"
   },
   "description": "Custom Persona theme for NodeBB by Exodo",
   "main": "theme.less",

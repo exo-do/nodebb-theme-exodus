@@ -22,8 +22,8 @@
 			user: JSON.parse('{{userJSON}}')
 		};
 	</script>
+	
 	<script src="{relative_path}/nodebb.min.js?{config.cache-buster}"></script>
-	<!-- IMPORT partials/requirejs-config.tpl -->
 
 	<!-- BEGIN scripts -->
 	<script type="text/javascript" src="{scripts.src}"></script>
@@ -75,7 +75,7 @@
 				[[global:header.chats]]
 				<i class="counter" component="chat/icon" data-content="0"></i>
 			</h3>
-			<ul class="menu-section-list chat-list"></ul>
+			<ul class="menu-section-list chat-list" component="chat/list"></ul>
 		</section>
 		<!-- ENDIF config.loggedIn -->
 	</nav>

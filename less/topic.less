@@ -1,4 +1,8 @@
 .topic {
+	[component="post/header"] {
+		margin-top: 0px;
+	}
+
 	h1 {
 		line-height: 40px;
 		margin-bottom: 30px;
@@ -27,17 +31,13 @@
 		.topic-title {
 			text-transform: initial;
 		}
-
-		.browsing-users {
-			margin-top: 3px;
-		}
 	}
 
 	.posts {
 		h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
- 			margin-top: 0px;
- 		}
-		
+			margin-top: 0px;
+		}
+
 		h1 {
 			font-size: 22px;
 			margin: 10px 0;
@@ -115,17 +115,23 @@
 		.transition(0.75s ease-in-out opacity);
 	}
 
+	[component="post/header"] {
+		.fa {
+			margin-top: 7px;
+		}
+	}
+
 	[component="post/anchor"] {
- 		position: relative;
- 		top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
- 	}
+		position: relative;
+		top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
+	}
 
 	[component="post/upvote"], [component="post/downvote"] {
 		color: @gray-light;
 
-			&:focus {
-     		text-decoration: none;
-    	}
+        	&:focus {
+            		text-decoration: none;
+        	}
 	}
 
 	[component="post/upvote"].upvoted, [component="post/downvote"].downvoted {
@@ -134,6 +140,15 @@
 
 	[component="post/parent"] {
 		font-size: 10px;
+	}
+
+	[component="post/reply-count"] {
+		margin-left: 61px;
+	}
+
+	[component="post/replies"] {
+		margin-left: 61px;
+		margin-top: 20px;
 	}
 
 	.stats {
@@ -205,6 +220,7 @@
 
 	.tags {
 		vertical-align: -40%;
+		margin-bottom: 20px;
 	}
 
 	h1 {
@@ -252,6 +268,10 @@
 				.user-icon-style(23px, 1.3rem, 50%);
 			}
 		}
+
+		[component="post/reply-count"] {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -269,7 +289,7 @@
 		list-style-type: none;
 		padding: 0;
 
-		> li {
+		[component="post"] {
 			position: relative;
 
 			.edit-icon {
@@ -277,7 +297,7 @@
 			}
 
 			&.deleted {
-				.content {
+				> .content {
 					.opacity(0.3);
 				}
 
@@ -361,11 +381,11 @@
 		left: 0px;
 		z-index: 100;
 		transition: opacity 250ms ease-in;
- 		opacity: 0;
+		opacity: 0;
 
- 		&.ready {
- 			opacity: 1;
- 		}
+		&.ready {
+			opacity: 1;
+		}
 
 		.wrapper {
 			padding: 5px 0px 5px 0px;
@@ -418,5 +438,51 @@
 		height: 24px;
 		position: relative;
 		text-align: center;
+	}
+}
+
+.fork-thread-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.fork-thread-card {
+		max-width: 33%;
+	}
+}
+
+[component="post"] {
+
+	[component="user/picture"], [component="user/status"] {
+		opacity: 1;
+	}
+
+	.icon:before {
+		opacity: 0;
+	}
+
+	&.bg-success {
+		background-color: initial;
+
+		.icon:before {
+			border: 1px solid #5cb85c;
+    		color: #5cb85c;
+    		-webkit-transition: .2s ease-in-out all;
+    		transition: .2s ease-in-out all;
+    		content: "\f00c";
+    		padding: 14px;
+		    border-radius: 50%;
+		    opacity: 1;
+		    position: absolute;
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		}
+
+		[component="user/picture"], [component="user/status"] {
+			opacity: 0;
+		}
 	}
 }

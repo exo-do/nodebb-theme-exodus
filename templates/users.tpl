@@ -6,20 +6,20 @@
 		<div class="col-lg-6">
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
-		<div class="col-lg-3">
+		<div class="col-xs-3 text-right">
 			<!-- IF inviteOnly -->
 			<!-- IF loggedIn -->
-			<button component="user/invite" class="btn btn-success pull-right"><i class="fa fa-users"></i> [[users:invite]]</button>
+			<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
 			<!-- ENDIF loggedIn -->
 			<!-- ENDIF inviteOnly -->
 		</div>
 		<!-- IF function.displayUserSearch, {config.allowGuestUserSearching} -->
-		<div class="col-lg-3">
+		<div class="col-lg-3 col-xs-9">
 			<div class="search">
 				<div class="input-group">
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
 					<span class="input-group-addon">
-						<i class="fa fa-search"></i>
+						<i component="user/search/icon" class="fa fa-search"></i>
 					</span>
 				</div>
 			</div>
@@ -41,8 +41,5 @@
 		<!-- ENDIF anonymousUserCount -->
 	</ul>
 
-	<div class="text-center {loadmore_display}">
-		<button id="load-more-users-btn" class="btn btn-primary">[[users:load_more]]</button>
-	</div>
-	<br/>
+	<!-- IMPORT partials/paginator.tpl -->
 </div>

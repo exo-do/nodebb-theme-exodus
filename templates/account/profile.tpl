@@ -5,11 +5,17 @@
 		<h1 class="fullname"><!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname --></h1>
 		<h2 class="username"><!-- IF !banned -->@{username}<!-- ELSE -->[[user:banned]]<!-- ENDIF !banned --></h2>
 
+
+		<!-- IF selectedGroup.slug -->
+		<div class="text-center">
+			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};"><!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
+		</div>
+		<br/>
+		<!-- ENDIF selectedGroup.slug -->
+
 		<!-- IF aboutme -->
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
-
-
 
 		<div class="account-stats">
 			<!-- IF !reputation:disabled -->
@@ -18,6 +24,7 @@
 				<span class="stat-label">[[global:reputation]]</span>
 			</div>
 			<!-- ENDIF !reputation:disabled -->
+
 			<div class="stat">
 				<div class="human-readable-number" title="{postcount}">{postcount}</div>
 				<span class="stat-label">[[global:posts]]</span>
@@ -123,6 +130,9 @@
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
 				<!-- ENDIF !posts.length -->
 				<!-- IMPORT partials/posts_list.tpl -->
+				<!-- IF config.usePagination -->
+					<!-- IMPORT partials/paginator.tpl -->
+				<!-- ENDIF config.usePagination -->
 			</div>
 		</div>
 	</div>

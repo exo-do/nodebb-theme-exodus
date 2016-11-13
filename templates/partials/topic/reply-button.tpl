@@ -24,6 +24,6 @@ visible-lg-inline">[[topic:reply]]</span><i class="fa fa-reply"></i></button>
 <!-- ELSE -->
 
 <!-- IF !privileges.topics:reply -->
-<a href="{config.relative_path}/login" class="btn btn-primary">[[topic:guest-login-reply]]</a>
+<a component="post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[topic:guest-login-reply]]</a>
 <!-- ENDIF !privileges.topics:reply -->
 <!-- ENDIF loggedIn -->

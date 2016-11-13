@@ -27,18 +27,19 @@
 
 			.modal-content {
 				height: 100%;
+				border: none;
 			}
 		}
 	}
+
 	.account {
-	 		margin-top: 256px;
+		margin-top: 256px;
 
-	 		.cover .controls i {
-	 			font-size: 3em;
-	 		}
-	 }
+		.cover .controls i {
+			font-size: 3em;
+		}
+	}
 }
-
 
 @media (max-width: @screen-md-max) {
 	body {
@@ -76,20 +77,60 @@
 
 			li {
 				width: auto;
-				padding: 0;
+				border: none;
+				color: #fff;
+				position: relative;
+				height: 60px;
 
-				a {
-					color: white;
+				&:hover {
+					background: none;
+				}
 
-					i {
-						left: 44px;
-						top: 9px;
+				&:not(:last-child) {
+					border-bottom: none;
+				}
+
+				.main-avatar {
+					position: absolute;
+					top: 0;
+					left: 0;
+
+					.avatar {
+						height: 40px;
+						width: 40px;
+						font-size: 20px;
+						border-radius: 0;
 					}
+				}
+
+				.members {
+					display: none;
+				}
+
+				.room-name {
+					display: block;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					padding-left: 60px;
+				}
+
+				.teaser-content {
+					padding-left: 60px;
+					display: block;
+					font-size: 13px;
+					opacity: .8;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
 				}
 			}
 		}
 
 		.menu-section .chat-list, .menu-section .notification-list-mobile {
+			.user-link {
+				display: inline;
+			}
 			.unread {
 				background-color: inherit;
 

@@ -9,24 +9,13 @@
 		li {
 			width: 300px;
 			text-align: left;
-			margin-bottom: 5px;
-			margin-right: 5px;
-			margin-left: 5px;
 			list-style-type: none;
 			padding: 0.5em;
 			clear: both;
 
-			img, .user-icon {
-				.user-icon-style(@border-radius: 50%);
-				float: left;
-			}
-
 			a {
-				color: inherit;
 				white-space: normal;
-				overflow: hidden;
 				margin: 0;
-				// padding: 3px 5px 3px 20px;
 				text-overflow: ellipsis;
 
 				.text {
@@ -75,29 +64,38 @@
 	.chat-list {
 		.notification-list;
 
-		li {
+		> li {
 			.pointer;
-			width: 200px;
+			width: 300px;
+			padding-bottom: 1rem;
+			margin: 0;
 
-			a {
-				line-height: 30px;
+			&:hover {
+				background: @gray-lighter;
+			}
 
-				position: relative;
-
-				i {
-					position: absolute;
-					left: -26px;
-				}
-
-				img, .user-icon {
-					.user-icon-style(@border-radius: 50%);
-					margin-right: 1em;
-				}
+			&:not(:last-child) {
+				border-bottom: 1px solid @gray-lighter;
 			}
 
 			&.no_active a {
 				text-align: center;
 				white-space: normal;
+			}
+
+			a {
+				line-height: 24px;
+			}
+
+			.members {
+				padding-left: 1rem;
+
+				li {
+					display: inline-block;
+					width: 16px;
+					padding: 0;
+					margin: 0;
+				}
 			}
 		}
 	}
@@ -106,7 +104,7 @@
 .header {
 
 	[component="navbar/title"] {
-		//display: none !important; //temp
+		display: none !important; //temp
 	}
 
 	.navbar-toggle {
@@ -169,12 +167,13 @@
 	.pagination-block {
 		margin-right: 10px !important;
 		transition: opacity 250ms ease-in;
- 		opacity: 0;
+		opacity: 0;
 		pointer-events: none;
- 		&.ready {
- 			opacity: 1;
-			pointer-events: inherit;;
- 		}
+
+		&.ready {
+			opacity: 1;
+			pointer-events: inherit;
+		}
 
 		.progress-container {
 			height: 2px;
@@ -291,9 +290,9 @@
 
 .unread-count:after {
 	content: attr(data-content);
-	position: absolute;;
-	left: 23px;
-	top: 10px;
+	position: absolute;
+    	left: 23px;
+    	top: 10px;
 	font-size: 10px;
 	text-align: center;
 	border: 1px solid #890405;
@@ -310,10 +309,9 @@
 
 #mobile-menu [component="notifications/icon"].unread-count:after, .slideout-menu .unread-count:after {
 	position: relative;
-  left: -6px;
-  top: -7px;
+    	left: -6px;
+    	top: -7px;
 }
-
 
 #search-form {
 	#search-button {
