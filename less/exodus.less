@@ -273,6 +273,8 @@ a:focus, a:hover {
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
 
+
+
 .btn-xs {
 font-size: 12px !important;
 line-height: 1.5 !important;
@@ -290,6 +292,7 @@ background-color: #fff; //cambiar blanco a variable
 
 	.topic-title {
 		display: inline-block;
+		padding-bottom: 10px;
 		@media (max-width: @screen-xs-max){
 			font-size: 17px;
 		}
@@ -462,7 +465,7 @@ background-color: #fff; //cambiar blanco a variable
 }
 
 .group-badge{
-	padding: 10px;
+	padding: 5px;
 }
 
 //bookmark HR easeinout
@@ -491,6 +494,23 @@ background-color: #fff; //cambiar blanco a variable
 .topic .posts .content pre code {
     white-space: pre-line !important;
 }
+
+[component="post/replies"] {
+	margin-left: 20px !important;
+	margin-top: 20px;
+		@media (max-width: @screen-xs-max /*  767px*/)
+		{
+			margin-left: 3px;
+		}
+	.post-header {
+		display: none;
+	}
+	.post-details {
+		display: none;
+	}
+}
+
+
 
 /* -------------------------------------- CATEGORY ----------------------------------------*/
 
@@ -580,7 +600,7 @@ background-color: #fff; //cambiar blanco a variable
 				}
 
 				.avatar {
-				padding-top: 5px;
+				padding-top: 4px;
 
 				.user-icon,.user-img {
 					width: 35px;
@@ -662,6 +682,11 @@ background-color: #fff; //cambiar blanco a variable
 
 
 /* -------------------------------------- CATEGORIES ----------------------------------------*/
+
+.categories>li .content img, .category>ul>li .content img, .categories>li .content .user-icon, .category>ul>li .content .user-icon {
+	border-radius: 20% !important;
+}
+
 
 .categories {
 
