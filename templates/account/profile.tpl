@@ -18,13 +18,6 @@
 		<!-- ENDIF aboutme -->
 
 		<div class="account-stats">
-			<!-- IF !reputation:disabled -->
-			<div class="stat">
-				<div class="human-readable-number" title="{reputation}">{reputation}</div>
-				<span class="stat-label">[[global:reputation]]</span>
-			</div>
-			<!-- ENDIF !reputation:disabled -->
-
 			<div class="stat">
 				<div class="human-readable-number" title="{postcount}">{postcount}</div>
 				<span class="stat-label">[[global:posts]]</span>
@@ -44,6 +37,14 @@
 				<div class="human-readable-number"  title="{followingCount}">{followingCount}</div>
 				<span class="stat-label">[[user:following]]</span>
 			</div>
+			<!-- IF !reputation:disabled -->
+			<div class="stat">
+				<div class="human-readable-number" title="{reputation}">{reputation}</div>
+				<span class="stat-label">[[global:reputation]]</span>
+			</div>
+			<!-- ENDIF !reputation:disabled -->
+			
+			<!-- IMPORT partials/points_profile.tpl -->
 		</div>
 
 		<div class="text-center profile-meta">
