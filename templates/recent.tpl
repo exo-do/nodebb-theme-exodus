@@ -10,10 +10,11 @@
 			<!-- ENDIF loggedIn -->
 		</div>
 
-		<div class="btn-group pull-right">
+		<div class="btn-group pull-right bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
-				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><i class="fa fa-fw {selectedCategory.icon}"></i><!-- ENDIF selectedCategory.icon --><span class="hidden-xs"> {selectedCategory.name}</span>
+				<!-- ELSE -->
+				<i class="fa fa-check-square-o visible-xs-inline" aria-hidden="true"></i><span class="hidden-xs">[[unread:all_categories]]</span><!-- ENDIF selectedCategory --> <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<li role="presentation" class="category">
@@ -27,9 +28,9 @@
 			</ul>
 		</div>
 
-		<div class="btn-group pull-right">
+		<div class="btn-group pull-right bottom-sheet">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedFilter.name} <span class="caret"></span>
+			<i class="fa fa-bars visible-xs-inline" aria-hidden="true"></i><span class="hidden-xs">{selectedFilter.name}</span> <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				<!-- BEGIN filters -->
@@ -40,7 +41,7 @@
 			</ul>
 		</div>
 	</div>
-
+ </br>
 	<hr class="hidden-xs"/>
 
 	<div class="category">
