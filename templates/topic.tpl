@@ -75,6 +75,8 @@ var plantilla = '/api/recent';
 
 	</ul>
 
+	<!-- IMPORT partials/topic/quickreply.tpl -->
+</br>
 	<div class="post-bar">
 		<!-- IMPORT partials/post_bar.tpl -->
 	</div>

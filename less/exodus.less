@@ -516,6 +516,35 @@ background-color: #fff; //cambiar blanco a variable
 }
 
 
+.quick-reply {
+        margin-top: 20px;
+
+        .reply-user {
+            text-align: center;
+
+            a {
+                display: inline-block;
+
+                .user-avatar {
+                    .user-avatar(80px);
+                }
+
+                .user-icon {
+                    .user-icon(80px, 4em);
+                }
+            }
+
+            .author {
+                margin-top: 10px;
+            }
+        }
+
+        button {
+            float: right;
+            display: block;
+            margin: 10px 15px 10px 0;
+        }
+    }
 
 /* -------------------------------------- CATEGORY ----------------------------------------*/
 
@@ -587,7 +616,7 @@ background-color: #fff; //cambiar blanco a variable
 						max-height: 32px;      /* fallback */
 						-webkit-line-clamp: 2; /* number of lines to show */
 						-webkit-box-orient: vertical;
-						
+
 						}
 					}
 					small {

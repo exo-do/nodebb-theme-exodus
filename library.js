@@ -2,7 +2,7 @@
 
 var S = require.main.require('string');
 var	meta = module.parent.require('./meta');
-
+var user = module.parent.require('./user');
 var library = {};
 
 library.init = function(params, callback) {
@@ -100,6 +100,22 @@ library.getThemeConfig = function(config, callback) {
 
 	callback(false, config);
 };
+
+library.addUserToTopic = function(data, callback) {
+
+	if (data.req.user) {
+		user.getUserData(data.req.user.uid, function(err, userdata) {
+			if (err) {
+				return callback(err);
+			}
+
+			data.templateData.loggedInUser = userdata;
+			callback(null, data);
+		});
+	} else {
+		callback(null, data);
+	}
+}
 
 function renderAdmin(req, res, next) {
 	res.render('admin/plugins/persona', {});

@@ -6,7 +6,8 @@
 			{ "hook": "filter:widgets.getAreas", "method": "defineWidgetAreas" },
 			{ "hook": "filter:config.get", "method": "getThemeConfig" },
 			{ "hook": "static:app.load", "method": "init" },
-			{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
+			{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
+			{ "hook": "filter:topic.build", "method": "addUserToTopic" }
 	],
 	"scripts": [
 		"lib/persona.js",
@@ -15,7 +16,8 @@
 		"lib/modules/slideout.min.js",
 		"lib/client/chats.js",
 		"lib/sly.min.js",
-		"lib/modules/modernizr.js"
+		"lib/modules/modernizr.js",
+		"lib/quickreply.js"
 	],
 	"acpScripts": [
 		"lib/admin.js"
