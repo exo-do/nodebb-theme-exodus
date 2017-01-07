@@ -1,5 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="recent">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="btn-toolbar">
 		<div class="pull-left">

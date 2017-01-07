@@ -1,7 +1,5 @@
-
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="notifications">
-
-	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="dropdown pull-right visible-xs-block">
 		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
@@ -40,5 +38,3 @@
 	<!-- END notifications -->
 	</ul>
 </div>
-
-

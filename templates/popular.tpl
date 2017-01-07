@@ -29,9 +29,9 @@ jQuery(document).ready(function($){
 </script>
 
 <main class="cd-main-content">
-
-<div class="popular">
 	<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="popular">
+
 	<a href="#0" class="cd-btn pull-right hidden">Fire Panel</a>
 	<ul class="nav nav-pills" component="popular/tab">
 		<li><a href='{config.relative_path}/popular/daily'>[[recent:day]]</a></li>

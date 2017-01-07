@@ -1,6 +1,5 @@
-<div class="unread">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="unread-div">
 
 	<div class="btn-toolbar">
 		<div class="pull-left">

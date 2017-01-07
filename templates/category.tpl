@@ -7,7 +7,7 @@
 
 	<!-- IF children.length --><hr class="hidden-xs"/><!-- ENDIF children.length -->
 
-	<div class="clearfix">
+	<div class="clearfix btn-toolbar">
 		<!-- IF privileges.topics:create -->
 		<button component="category/post" id="new_topic" class="btn btn-primary">[[category:new_topic_button]]</button>
 		<!-- ELSE -->

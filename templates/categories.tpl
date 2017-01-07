@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header"></div>
 <div class="row">
-	<div class="col-lg-12 col-sm-12" has-widget-class="col-lg-9 col-sm-12" has-widget-target="sidebar">
+	<div class="col-lg-12 col-sm-12 categories-div" has-widget-class="col-lg-9 col-sm-12" has-widget-target="sidebar">
 		<!--<h1 class="categories-title">[[pages:categories]]</h1>-->
 	<div class="categories-bar"><p class="hidden-xs">[[pages:categories]]</p></div>
 

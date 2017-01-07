@@ -3,14 +3,19 @@
 /* -------------------------------------- HEADER ----------------------------------------*/
 
 //main margin and padding
+.row {
+		margin-left: 0px;
+		margin-right: 0px;
+}
+
 @media (min-width: @screen-xs-max){ // no mobile 767px
 	.navbar > div{
 		margin-left: 20px;
 		margin-right: 20px;
 	}
 	#content  {
-		margin-left: 20px;
-		margin-right: 20px;
+		//margin-left: 20px;
+		//margin-right: 20px;
 		padding-top: 10px;
 	}
 }
@@ -21,12 +26,17 @@
     padding-right: 0px;
 	}
 	#content  {
-		margin-left: 15px;
-		margin-right: 15px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.categories-div, .topic, .category {
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
 
-@media (min-width: 2400px){ //mega pantallas
+/*
+@media (min-width: 2000px){ //mega pantallas
 	.navbar > div{
 		margin-left: 40px;
 		margin-right: 40px;
@@ -37,7 +47,14 @@
 		padding-top: 10px;
 	}
 }
+*/
 
+.recent, .unread-div , .popular{
+	@media (min-width: @screen-xs-max){ //no mobile
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 // navbar colors
 .header {
 	background-color: @navbar-bg;
@@ -130,8 +147,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-weight: bold;
 }
 
+.breadcrumb { padding-left: 15px; padding-right: 15px; }
 
-//botones
+.btn-toolbar { padding-left: 10px; padding-right: 5px; }
+
+
 
 //@color-fondo: #2e3539;
 @color-fondo: @topic-header;
@@ -174,7 +194,7 @@ a:focus, a:hover {
 //exodus button
 .btn-default, .btn-primary, .btn-warning, .btn-danger, .btn-info {
 
-	width: auto;
+	//width: auto;
 	height: 27px;
 	line-height: 27px !important;
 	margin: auto;
@@ -275,6 +295,10 @@ a:focus, a:hover {
 	top: -1px !important;
 }
 
+
+//do no write area below 16px for no zoom on IOS
+.form-control { font-size: 16px; }
+
 /* -------------------------------------- TOPIC ----------------------------------------*/
 
 
@@ -285,9 +309,11 @@ font-size: 12px !important;
 line-height: 1.5 !important;
 background-color: #fff; //cambiar blanco a variable
 }
-.topic {
+@media (max-width: @screen-xs-max){
+	.topic {
 	padding-left: 8px;
 	padding-right: 8px;
+	}
 }
 .topic h1 {
 	text-align: center;
@@ -667,8 +693,8 @@ background-color: #fff; //cambiar blanco a variable
 		display: block;
 		line-height: 30px;
 		width: auto;
-		margin-left: -15px;
-		margin-right: -15px;
+		//margin-left: -15px;
+		//margin-right: -15px;
 
 		p {
 			color: #fff; //cambiar
@@ -821,8 +847,8 @@ background-color: #fff; //cambiar blanco a variable
 	display: block;
 	line-height: 30px;
 	width: auto;
-	margin-left: -15px;
-	margin-right: -15px;
+	//margin-left: -15px;
+	//margin-right: -15px;
 
 	p {
 		color: #fff; //cambiar

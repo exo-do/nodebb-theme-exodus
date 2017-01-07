@@ -1,7 +1,7 @@
 {
   "name": "nodebb-theme-exodus",
-  "version": "5.1.8",
- "nbbpm": {
+  "version": "5.2.0",
+  "nbbpm": {
     "id": "nodebb-theme-exodus",
     "name": "Theme Exodus",
     "type": "theme",
@@ -11,7 +11,7 @@
   "main": "theme.less",
   "repository": {
     "type": "git",
-    "url": "https://github.com/exo-do/nodebb-theme-exodus"
+    "url": "git+https://github.com/exo-do/nodebb-theme-exodus.git"
   },
   "keywords": [
     "nodebb",
@@ -37,5 +37,31 @@
   },
   "devDependencies": {
     "publish": "0.5.0"
-  }
+  },
+  "homepage": "https://github.com/exo-do/nodebb-theme-exodus#readme",
+  "_id": "nodebb-theme-exodus@5.1.8",
+  "_shasum": "53ad541b43cc9f5c95aa45beaa2df6fd2bb75c95",
+  "_from": "nodebb-theme-exodus@5.1.8",
+  "_npmVersion": "2.15.11",
+  "_nodeVersion": "0.10.40",
+  "_npmUser": {
+    "name": "exodo",
+    "email": "contacto@exo.do"
+  },
+  "maintainers": [
+    {
+      "name": "exodo",
+      "email": "contacto@exo.do"
+    }
+  ],
+  "dist": {
+    "shasum": "53ad541b43cc9f5c95aa45beaa2df6fd2bb75c95",
+    "tarball": "https://registry.npmjs.org/nodebb-theme-exodus/-/nodebb-theme-exodus-5.1.8.tgz"
+  },
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/nodebb-theme-exodus-5.1.8.tgz_1481728711611_0.3899184735491872"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/nodebb-theme-exodus/-/nodebb-theme-exodus-5.1.8.tgz"
 }

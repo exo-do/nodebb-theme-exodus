@@ -12,7 +12,7 @@
 		</div>
 		<br/>
 		<!-- ENDIF selectedGroup.slug -->
-
+		
 		<!-- IF aboutme -->
 		<span component="aboutme" class="text-center aboutme">{aboutme}</span>
 		<!-- ENDIF aboutme -->
@@ -43,7 +43,7 @@
 				<span class="stat-label">[[global:reputation]]</span>
 			</div>
 			<!-- ENDIF !reputation:disabled -->
-			
+
 			<!-- IMPORT partials/points_profile.tpl -->
 		</div>
 

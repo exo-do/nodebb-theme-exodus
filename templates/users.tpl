@@ -1,6 +1,5 @@
-<div class="users">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="users">
 
 	<div class="row">
 		<div class="col-lg-6">

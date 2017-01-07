@@ -1,6 +1,5 @@
-<div class="outgoing">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
+<div class="outgoing">
 
 	<div class="well">
 		<h3>

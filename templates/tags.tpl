@@ -1,5 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
 <div class="tags">
-	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<!-- IF tags.length -->
 	<div class="row">
