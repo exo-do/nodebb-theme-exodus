@@ -64,6 +64,7 @@
 			</small>
 			</p>
 	</div>
+
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature hidden-xs">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->
@@ -74,7 +75,16 @@
 
 
 <div class="links-bar">
-
+	<small class="replies">
+		<!-- IF !hideReplies -->
+		<a component="post/reply-count" href="#" class="pull-left no-select <!-- IF !posts.replies -->hidden<!-- ENDIF !posts.replies -->">
+			<i class="fa fa-fw fa-comments fa-lg" component="post/replies/open"></i>
+			<i class="fa fa-fw fa-chevron-down fa-lg hidden" component="post/replies/close"></i>
+			<i class="fa fa-fw fa-spin fa-spinner fa-lg hidden" component="post/replies/loading"></i>
+			<span component="post/reply-count/text" data-replies="{posts.replies}">{posts.replies}</span>
+		</a>
+		<!-- ENDIF !hideReplies -->
+	</small>
 	<small>
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->"><i class="fa fa-reply"></i>&nbsp;&nbsp;[[topic:reply]]</a>
@@ -101,16 +111,11 @@
 
 		<!-- IMPORT partials/topic/post-menu.tpl -->
 	</small>
-	<!-- IF !hideReplies -->
-	<a component="post/reply-count" href="#" class="no-select <!-- IF !posts.replies -->hidden<!-- ENDIF !posts.replies -->">
-		<i class="fa fa-fw fa-chevron-right" component="post/replies/open"></i>
-		<i class="fa fa-fw fa-chevron-down hidden" component="post/replies/close"></i>
-		<i class="fa fa-fw fa-spin fa-spinner hidden" component="post/replies/loading"></i>
-		<span component="post/reply-count/text" data-replies="{posts.replies}">[[topic:replies_to_this_post, {posts.replies}]]</span>
-	</a>
-	<!-- ENDIF !hideReplies -->
 
 </div>
 
 <hr />
+<div class="reactions-div">
+		{posts.reactions}
+</div>
 <br />

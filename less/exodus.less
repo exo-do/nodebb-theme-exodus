@@ -494,6 +494,9 @@ background-color: #fff; //cambiar blanco a variable
 		padding: 10px;
 	}
 }
+.topic .moderator-tools {
+	margin-left: 1px;
+}
 
 .group-badge{
 	padding: 5px;
@@ -527,8 +530,8 @@ background-color: #fff; //cambiar blanco a variable
 }
 
 [component="post/replies"] {
-	margin-left: 20px !important;
-	margin-top: 20px;
+	margin-left: 60px !important;
+	margin-top: 0px !important;
 		@media (max-width: @screen-xs-max /*  767px*/)
 		{
 			margin-left: 3px;
@@ -539,8 +542,19 @@ background-color: #fff; //cambiar blanco a variable
 	.post-details {
 		display: none;
 	}
+	.reactions-div{
+		display:none;
+	}
 }
 
+.topic [component="post/reply-count"]{
+	margin-left: 10px;
+}
+.topic [component="post/reply-count/text"]{
+		font-size: 14px;
+}
+//inline replies small
+.replies {text-align: left !important;}
 
 .quick-reply {
         margin-top: 20px;
@@ -571,6 +585,14 @@ background-color: #fff; //cambiar blanco a variable
             margin: 10px 15px 10px 0;
         }
     }
+
+//reaction emojis
+.reacted img { height: 20px !important; }
+.reactions-div { padding-top: 5px; }
+.reactions .reaction-add { font-size: 15px}
+
+//emoji modal size fix
+#emoji-aaexodo .emoji[data-set-id="exodo"] { height: 20px;}
 
 /* -------------------------------------- CATEGORY ----------------------------------------*/
 
